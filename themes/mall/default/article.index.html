@@ -1,0 +1,106 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <base href="{$site_url}/" />
+    <!-- Use IE7 mode -->
+    <meta http-equiv="X-UA-Compatible" content="IE=EmulateIE7 charset={$charset}" />
+    <meta http-equiv="Content-Type" content="text/html; charset={$charset}" />
+    {$page_seo}
+
+    <link href="{res file=web/css/style.css}" rel="stylesheet" type="text/css"/>
+    <link href="{res file=web/css/news.css}" rel="stylesheet" type="text/css"/>
+    <link href="{res file=css/ecmall.css}" rel="stylesheet" type="text/css" />
+    <script type="text/javascript" src="index.php?act=jslang"></script>
+    <script type="text/javascript" src="{lib file=jquery.js}" charset="utf-8"></script>
+    <script type="text/javascript" src="{lib file=ecmall.js}" charset="utf-8"></script>
+    <script type="text/javascript" src="{res file=js/nav.js}" charset="utf-8"></script>
+    <script type="text/javascript" src="{res file=js/select.js}" charset="utf-8"></script>
+    <script type="text/javascript">
+        //<!CDATA[
+        var SITE_URL = "{$site_url}";
+        var REAL_SITE_URL = "{$real_site_url}";
+        var PRICE_FORMAT = '{$price_format}';
+
+        $(function(){
+            var select_list = document.getElementById("select_list");
+            var float_list = document.getElementById("float_list");
+            select_list.onmouseover = function () {
+                float_list.style.display = "block";
+            };
+            select_list.onmouseout = function () {
+                float_list.style.display = "none";
+            };
+        });
+        //]]>
+    </script>
+
+    {$_head_tags}
+    <!--<editmode></editmode>-->
+</head>
+<body>
+{include file=header.html}
+{include file=curlocal.html}
+<div class="content">
+    <div class="left">
+        <div class="module_sidebar">
+            <h2><b>{$lang.acategory}</b></h2>
+            <div class="wrap">
+                <div class="wrap_child">
+                    <div class="classify_list">
+                        <ul>
+                            <!-- {foreach from=$acategories item=acategory} -->
+                            <li><a href="{url app=article&cate_id=$acategory.cate_id}">{$acategory.cate_name|escape}</a></li>
+                            <!-- {/foreach} -->
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <h2><b>{$lang.new_article}</b></h2>
+            <div class="wrap">
+                <div class="wrap_child">
+                    <div class="side_textlist">
+                        <ul>
+                            <!-- {foreach from=$new_articles item=new_article} -->
+                            <li><a {if $new_article.link}target="_blank"{/if} href="{url app=article&act=view&article_id=$new_article.article_id}">{$new_article.title|escape}</a></li>
+                            <!-- {foreachelse} -->
+                            <li>{$lang.no_new_article}</li>
+                            <!-- {/foreach} -->
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="right">
+        <div class="shop_text_list">
+            <div class="ornament1"></div>
+            <div class="ornament2"></div>
+            <table>
+                <tr>
+                    <th class="align1" colspan="2">
+                        <div class="table_title">
+                        </div>
+                        <div class="top_page">
+                            {include file=page.top2.html}
+                        </div>
+                    </th>
+                </tr>
+                <!-- {foreach from=$articles item=article} -->
+                <tr>
+                    <td><a {if $article.link}target="_blank"{/if} href="{url app=article&act=view&article_id=$article.article_id}" class="lebioa">{$article.title|escape}</a></td>
+                    <td class="width9">{$article.add_time|date:Y-m-d H:i}</td>
+                </tr>
+                <!-- {foreachelse} -->
+                <tr>
+                  <td align="center" colspan="2">{$lang.no_records}</td>
+                </tr>
+                <!-- {/foreach} -->
+            </table>
+        </div>
+
+        {include file=page.bottom.html}
+    </div>
+</div>
+{include file=footer.html}

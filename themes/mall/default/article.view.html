@@ -1,0 +1,127 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <base href="{$site_url}/" />
+    <!-- Use IE7 mode -->
+    <meta http-equiv="X-UA-Compatible" content="IE=EmulateIE7 charset={$charset}" />
+    <meta http-equiv="Content-Type" content="text/html; charset={$charset}" />
+    {$page_seo}
+
+    <link href="{res file=web/css/style.css}" rel="stylesheet" type="text/css"/>
+    <link href="{res file=web/css/news.css}" rel="stylesheet" type="text/css"/>
+    <link href="{res file=css/ecmall.css}" rel="stylesheet" type="text/css" />
+    <script type="text/javascript" src="index.php?act=jslang"></script>
+    <script type="text/javascript" src="{lib file=jquery.js}" charset="utf-8"></script>
+    <script type="text/javascript" src="{lib file=ecmall.js}" charset="utf-8"></script>
+    <script type="text/javascript" src="{res file=js/nav.js}" charset="utf-8"></script>
+    <script type="text/javascript" src="{res file=js/select.js}" charset="utf-8"></script>
+    <script type="text/javascript">
+        //<!CDATA[
+        var SITE_URL = "{$site_url}";
+        var REAL_SITE_URL = "{$real_site_url}";
+        var PRICE_FORMAT = '{$price_format}';
+
+        $(function(){
+            var select_list = document.getElementById("select_list");
+            var float_list = document.getElementById("float_list");
+            select_list.onmouseover = function () {
+                float_list.style.display = "block";
+            };
+            select_list.onmouseout = function () {
+                float_list.style.display = "none";
+            };
+        });
+        //]]>
+    </script>
+
+    {$_head_tags}
+    <!--<editmode></editmode>-->
+</head>
+<body>
+
+<!-- header-->
+{include file=header.html}
+<!-- layout head  end-->
+<!-- header-->
+
+
+<!-- content -->
+<div class="main-wrap">
+    <div class="w-left">
+        <div class="news-top">
+            <ul class="news-crumbs clr">
+                <li>{include file=curlocal.html}</li>
+
+            </ul>
+        </div>
+        <div class="news-detail">
+            <dl class="title">
+                <dt><h4>{$article.title|escape}</h4></dt>
+                <dd><span>发布者：<em>admin</em></span><span>发布日期：<em>{$article.add_time|date:Y-m-d H:i}</em></span><a href="">打印</a></dd>
+            </dl>
+            <!-- {if $article.store_id} -->
+            {$article.content|escape:editor}
+            <!-- {else} -->
+            {$article.content}
+            <!-- {/if} -->
+
+            <i>(责任编辑：leonlee07)</i>
+        </div>
+    </div>
+    <div class="w-right">
+        <dl class="right-t">
+            <dt>专题资讯</dt>
+            <dd><a href="">2013年9月份钢材价格走势预测</a></dd>
+            <dd><a href="">2当季高搜索爆款流行元素&流行货源</a></dd>
+            <dd><a href="">2013年9月份钢材价格走势预测</a></dd>
+            <dd><a href="">2013年9月份钢材价格走势预测</a></dd>
+            <dd><a href="">2当季高搜索爆款流行元素&流行货源</a></dd>
+            <dd><a href="">2013年9月份钢材价格走势预测</a></dd>
+            <dd><a href="">2013年9月份钢材价格走势预测</a></dd>
+            <dd><a href="">2当季高搜索爆款流行元素&流行货源</a></dd>
+            <dd><a href="">2013年9月份钢材价格走势预测</a></dd>
+        </dl>
+        <!--<div class="ad"><img src="/themes/mall/default/styles/default/web/img/news-ad2.jpg" alt="" title=""></div>-->
+        <!--<div class="ad"><img src="/themes/mall/default/styles/default/web/img/news-ad2.jpg" alt="" title=""></div>-->
+        <!--&lt;!&ndash;<div class="right-b">&ndash;&gt;-->
+            <!--<dl>-->
+                <!--<dt>创业经验</dt>-->
+                <!--<dd>-->
+                    <!--<div class="news-pic"><img src="img/news-pic.jpg" alt="" title=""></div>-->
+                    <!--<div class="news-p"><a href=""><h3 class="orange">外贸客户是怎样得来的？</h3></a><p>客户是找来的，客户也有请来的，还有捡来的...<a class="orange" href="">[详情]</a></p></div>-->
+                <!--</dd>-->
+                <!--<div class="clear"></div>-->
+                <!--<ul>-->
+                    <!--<li><a href="">2013年9月份钢材价格走势预测</a></li>-->
+                    <!--<li><a href="">当季高搜索爆款流行元素&流行货源</a></li>-->
+                    <!--<li><a href="">2013年9月份钢材价格走势预测</a></li>-->
+                    <!--<li><a href="">当季高搜索爆款流行元素&流行货源</a></li>-->
+                    <!--<li><a href="">2013年9月份钢材价格走势预测</a></li>-->
+                <!--</ul>-->
+            <!--</dl>-->
+        <!--</div>-->
+        <!--<div class="right-b">-->
+            <!--<dl>-->
+                <!--<dt>创业经验</dt>-->
+                <!--<dd>-->
+                    <!--<div class="news-pic"><img src="img/news-pic.jpg" alt="" title=""></div>-->
+                    <!--<div class="news-p"><a href=""><h3 class="orange">外贸客户是怎样得来的？</h3></a><p>客户是找来的，客户也有请来的，还有捡来的...<a class="orange" href="">[详情]</a></p></div>-->
+                <!--</dd>-->
+                <!--<div class="clear"></div>-->
+                <!--<ul>-->
+                    <!--<li><a href="">2013年9月份钢材价格走势预测</a></li>-->
+                    <!--<li><a href="">当季高搜索爆款流行元素&流行货源</a></li>-->
+                    <!--<li><a href="">2013年9月份钢材价格走势预测</a></li>-->
+                    <!--<li><a href="">当季高搜索爆款流行元素&流行货源</a></li>-->
+                    <!--<li><a href="">2013年9月份钢材价格走势预测</a></li>-->
+                <!--</ul>-->
+            <!--</dl>-->
+        <!--</div>-->
+    </div>
+</div>
+<!-- content end-->
+<!-- footer  -->
+{include file=footer.html}
+</body>
+</html>
+

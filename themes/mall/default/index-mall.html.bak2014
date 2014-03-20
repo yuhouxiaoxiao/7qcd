@@ -1,0 +1,650 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="description" content=""/>
+    <meta name="keywords" content=""/>
+    <title>7彩岛——专业的童装产业链网</title>
+    <link href="{res file=web/css/index-mall.css}" rel="stylesheet" type="text/css"/>
+    <script type="text/javascript" src="{res file=web/js/jquery-1.4.2.min.js}"></script>
+    <script type="text/javascript" src="{res file=web/js/index.js}"></script>
+    <script type="text/javascript" src="{res file=web/js/jquery-1.8.0.min.js}"></script>
+    <script type="text/javascript" src="{res file=web/js/slide.js}"></script>
+
+</head>
+<body>
+<!-- header-->
+<!-- topnavp -->
+<div class="top-banner">
+    <div class="site-nav">
+        <p class="login-info">
+
+            {$lang.hello},{$visitor.user_name|escape}
+            <!--{if !$visitor.user_id}-->
+            <span>| <a href="{url app=member&act=login&ret_url=$ret_url}">请登录</a></span><span>|
+            <a href="{url app=member&act=register&ret_url=$ret_url}">免费注册</a></span>
+            <!--{else}-->
+            您好，尊敬的 <span class="member"><a href="">七彩岛会员</a></span> <span class="member">| <a href="{url app=member&act=logout}">退出</a></span>
+            <!--{/if}-->
+        </p>
+        <p class="quick-menu">
+            <a href="/index.php?app=member">用户中心</a><span>|</span><a href="">购物车(0)</a><span>|</span><a class="sina" href="">新浪微博</a><span>|</span><a class="qq" href="">腾讯微博</a>
+        </p>
+    </div>
+</div>
+<!-- topnav end   -->
+<!-- layout head  -->
+<div class="layout">
+    <div class="logo">
+        <a href="/">
+            <img src="/themes/mall/default/styles/default/web/img/logo.jpg" title="7彩岛" class="logo-pic"/>
+        </a>
+        <img  src="/themes/mall/default/styles/default/web/img/mark.png" title="7彩岛" class="logo-pic"/>
+    </div>
+    <div class="right-search">
+        <div class="search">
+            <dl>
+                <dt>
+                    <input type="text" name="keyword"  id="keyword" placeholder="请输入产品名称" class="searchtext"/>
+                </dt>
+                <input value="搜 索" type="button" class="search_button" />
+            </dl>
+        </div>
+        <div class="keyword">
+            <p>
+                热门搜索：
+            </p>
+            <p>
+                <!--{foreach from=$hot_keywords item=keyword}-->
+                <a href="{url app=search&keyword=$keyword}">{$keyword}</a>
+                <!--{/foreach}-->
+            </p>
+        </div>
+    </div>
+</div>
+<!-- layout head  end-->
+<!-- nav -->
+<div class="menu">
+<div class="menu-box">
+<div class="top-category">
+<div class="title">
+    全部分类
+</div>
+<!-- category-->
+<div class="aside-category-wrap">
+<div class="aside-quick-nav">
+<ul>
+
+
+
+
+<!-- {foreach from=$cate_tz item=parent name=child} -->
+
+<!-- {foreach from=$parent.children item=child name=nums} -->
+<!--{if $smarty.foreach.nums.iteration<5}-->
+
+<li>
+    <h4><a class="quick-item"  href="{url app=search&cate_id=$child.id}">{$child.value|escape}</a><i class="more-ico"></i>
+        <p class="subcon">
+            <!-- {foreach from=$child.children item=subchild} -->
+            <a href="{url app=search&cate_id=$subchild.id}">{$subchild.value|escape}</a>
+            <!-- {/foreach} -->
+        </p></h4>
+</li>
+<!--{/if}-->
+<!-- {/foreach} -->
+
+<!-- {/foreach} -->
+
+
+
+
+
+
+<!--<li>-->
+    <!--<h4><a class="quick-item"  href="">精品童装</a><i class="more-ico"></i>-->
+        <!--<p class="subcon">-->
+            <!--<a href="">男童</a>-->
+            <!--<a href="">女童</a>-->
+            <!--<a href="">家居童服</a>-->
+            <!--<a href="">儿童运动服</a>-->
+            <!--<a href="">婴儿装</a>-->
+            <!--<a href="">男童</a>-->
+            <!--<a href="">女童</a>-->
+        <!--</p></h4>-->
+    <!--&lt;!&ndash;开始&ndash;&gt;-->
+    <!--&lt;!&ndash;<div class="quick-sub-nav" style="display:none;">&ndash;&gt;-->
+        <!--&lt;!&ndash;<div class="quick-sub-navleft" >&ndash;&gt;-->
+            <!--&lt;!&ndash;<dl>&ndash;&gt;-->
+                <!--&lt;!&ndash;<dt>&ndash;&gt;-->
+                    <!--&lt;!&ndash;<a href="">男童</a>&ndash;&gt;-->
+                <!--&lt;!&ndash;</dt>&ndash;&gt;-->
+                <!--&lt;!&ndash;<dd>&ndash;&gt;-->
+                    <!--&lt;!&ndash;<a href="">棉纱</a>&ndash;&gt;-->
+                    <!--&lt;!&ndash;<a href="">纯棉</a>&ndash;&gt;-->
+                    <!--&lt;!&ndash;<a href="">腈纶</a>&ndash;&gt;-->
+                    <!--&lt;!&ndash;<a href="">莱卡棉</a>&ndash;&gt;-->
+                    <!--&lt;!&ndash;<a href="">珀莉丝</a>&ndash;&gt;-->
+                    <!--&lt;!&ndash;<a href="">棉纱</a>&ndash;&gt;-->
+                    <!--&lt;!&ndash;<a href="">纯棉</a>&ndash;&gt;-->
+                    <!--&lt;!&ndash;<a href="">腈纶</a>&ndash;&gt;-->
+                    <!--&lt;!&ndash;<a href="">莱卡棉</a>&ndash;&gt;-->
+                    <!--&lt;!&ndash;<a href="">珀莉丝</a>&ndash;&gt;-->
+                <!--&lt;!&ndash;</dd>&ndash;&gt;-->
+            <!--&lt;!&ndash;</dl>&ndash;&gt;-->
+            <!--&lt;!&ndash;<dl>&ndash;&gt;-->
+                <!--&lt;!&ndash;<dt>&ndash;&gt;-->
+                    <!--&lt;!&ndash;<a href="">女童</a>&ndash;&gt;-->
+                <!--&lt;!&ndash;</dt>&ndash;&gt;-->
+                <!--&lt;!&ndash;<dd>&ndash;&gt;-->
+                    <!--&lt;!&ndash;<a href="">棉纱</a>&ndash;&gt;-->
+                    <!--&lt;!&ndash;<a href="">纯棉</a>&ndash;&gt;-->
+                    <!--&lt;!&ndash;<a href="">腈纶</a>&ndash;&gt;-->
+                    <!--&lt;!&ndash;<a href="">莱卡棉</a>&ndash;&gt;-->
+                    <!--&lt;!&ndash;<a href="">珀莉丝</a>&ndash;&gt;-->
+                    <!--&lt;!&ndash;<a href="">棉纱</a>&ndash;&gt;-->
+                    <!--&lt;!&ndash;<a href="">纯棉</a>&ndash;&gt;-->
+                    <!--&lt;!&ndash;<a href="">腈纶</a>&ndash;&gt;-->
+                    <!--&lt;!&ndash;<a href="">莱卡棉</a>&ndash;&gt;-->
+                    <!--&lt;!&ndash;<a href="">珀莉丝</a>&ndash;&gt;-->
+                <!--&lt;!&ndash;</dd>&ndash;&gt;-->
+            <!--&lt;!&ndash;</dl>&ndash;&gt;-->
+            <!--&lt;!&ndash;<dl>&ndash;&gt;-->
+                <!--&lt;!&ndash;<dt>&ndash;&gt;-->
+                    <!--&lt;!&ndash;<a href="">婴儿</a>&ndash;&gt;-->
+                <!--&lt;!&ndash;</dt>&ndash;&gt;-->
+                <!--&lt;!&ndash;<dd>&ndash;&gt;-->
+                    <!--&lt;!&ndash;<a href="">棉纱</a>&ndash;&gt;-->
+                    <!--&lt;!&ndash;<a href="">纯棉</a>&ndash;&gt;-->
+                    <!--&lt;!&ndash;<a href="">腈纶</a>&ndash;&gt;-->
+                    <!--&lt;!&ndash;<a href="">莱卡棉</a>&ndash;&gt;-->
+                    <!--&lt;!&ndash;<a href="">珀莉丝</a>&ndash;&gt;-->
+                    <!--&lt;!&ndash;<a href="">棉纱</a>&ndash;&gt;-->
+                    <!--&lt;!&ndash;<a href="">纯棉</a>&ndash;&gt;-->
+                    <!--&lt;!&ndash;<a href="">腈纶</a>&ndash;&gt;-->
+                    <!--&lt;!&ndash;<a href="">莱卡棉</a>&ndash;&gt;-->
+                    <!--&lt;!&ndash;<a href="">珀莉丝</a>&ndash;&gt;-->
+                    <!--&lt;!&ndash;<a href="">棉纱</a>&ndash;&gt;-->
+                <!--&lt;!&ndash;</dd>&ndash;&gt;-->
+            <!--&lt;!&ndash;</dl>&ndash;&gt;-->
+            <!--&lt;!&ndash;<dl>&ndash;&gt;-->
+                <!--&lt;!&ndash;<dt>&ndash;&gt;-->
+                    <!--&lt;!&ndash;<a href="">腰带</a>&ndash;&gt;-->
+                <!--&lt;!&ndash;</dt>&ndash;&gt;-->
+                <!--&lt;!&ndash;<dd>&ndash;&gt;-->
+                    <!--&lt;!&ndash;<a href="">棉纱</a>&ndash;&gt;-->
+                    <!--&lt;!&ndash;<a href="">纯棉</a>&ndash;&gt;-->
+                    <!--&lt;!&ndash;<a href="">腈纶</a>&ndash;&gt;-->
+                    <!--&lt;!&ndash;<a href="">莱卡棉</a>&ndash;&gt;-->
+                    <!--&lt;!&ndash;<a href="">珀莉丝</a>&ndash;&gt;-->
+                <!--&lt;!&ndash;</dd>&ndash;&gt;-->
+            <!--&lt;!&ndash;</dl>&ndash;&gt;-->
+            <!--&lt;!&ndash;<dl>&ndash;&gt;-->
+                <!--&lt;!&ndash;<dt>&ndash;&gt;-->
+                    <!--&lt;!&ndash;<a href="">帽子</a>&ndash;&gt;-->
+                <!--&lt;!&ndash;</dt>&ndash;&gt;-->
+                <!--&lt;!&ndash;<dd>&ndash;&gt;-->
+                    <!--&lt;!&ndash;<a href="">棉纱</a>&ndash;&gt;-->
+                    <!--&lt;!&ndash;<a href="">纯棉</a>&ndash;&gt;-->
+                    <!--&lt;!&ndash;<a href="">腈纶</a>&ndash;&gt;-->
+                <!--&lt;!&ndash;</dd>&ndash;&gt;-->
+            <!--&lt;!&ndash;</dl>&ndash;&gt;-->
+            <!--&lt;!&ndash;<dl>&ndash;&gt;-->
+                <!--&lt;!&ndash;<dt>&ndash;&gt;-->
+                    <!--&lt;!&ndash;<a href="">鞋子</a>&ndash;&gt;-->
+                <!--&lt;!&ndash;</dt>&ndash;&gt;-->
+                <!--&lt;!&ndash;<dd>&ndash;&gt;-->
+                    <!--&lt;!&ndash;<a href="">皮革</a>&ndash;&gt;-->
+                    <!--&lt;!&ndash;<a href="">布</a>&ndash;&gt;-->
+                <!--&lt;!&ndash;</dd>&ndash;&gt;-->
+            <!--&lt;!&ndash;</dl>&ndash;&gt;-->
+            <!--&lt;!&ndash;<dl>&ndash;&gt;-->
+                <!--&lt;!&ndash;<dt>&ndash;&gt;-->
+                    <!--&lt;!&ndash;<a href="">软装饰</a>&ndash;&gt;-->
+                <!--&lt;!&ndash;</dt>&ndash;&gt;-->
+                <!--&lt;!&ndash;<dd>&ndash;&gt;-->
+                    <!--&lt;!&ndash;<a href="">棉纱</a>&ndash;&gt;-->
+                    <!--&lt;!&ndash;<a href="">纯棉</a>&ndash;&gt;-->
+                    <!--&lt;!&ndash;<a href="">腈纶</a>&ndash;&gt;-->
+                <!--&lt;!&ndash;</dd>&ndash;&gt;-->
+            <!--&lt;!&ndash;</dl>&ndash;&gt;-->
+        <!--&lt;!&ndash;</div>&ndash;&gt;-->
+    <!--&lt;!&ndash;</div >&ndash;&gt;-->
+    <!--&lt;!&ndash;结束&ndash;&gt;-->
+<!--</li>-->
+<!--<li>-->
+    <!--<h4><a class="quick-item" href="">精品配饰</a><i class="more-ico"></i>-->
+        <!--<p class="subcon">-->
+            <!--<a href="">鞋</a>-->
+            <!--<a href="">帽</a>-->
+            <!--<a href="">其他配件</a>-->
+            <!--<a href="">鞋</a>-->
+            <!--<a href="">帽</a>-->
+            <!--<a href="">其他配件</a>-->
+            <!--<a href="">鞋</a>-->
+            <!--<a href="">帽</a>-->
+            <!--<a href="">其他配件</a>-->
+        <!--</p></h4>&lt;!&ndash; &ndash;&gt;-->
+    <!--&lt;!&ndash;<div class="quick-sub-nav" style="display:none;">&ndash;&gt;-->
+        <!--&lt;!&ndash;<div class="quick-sub-navleft" >&ndash;&gt;-->
+            <!--&lt;!&ndash;<dl>&ndash;&gt;-->
+                <!--&lt;!&ndash;<dt>&ndash;&gt;-->
+                    <!--&lt;!&ndash;<a href="">腰带</a>&ndash;&gt;-->
+                <!--&lt;!&ndash;</dt>&ndash;&gt;-->
+                <!--&lt;!&ndash;<dd>&ndash;&gt;-->
+                    <!--&lt;!&ndash;<a href="">棉纱</a>&ndash;&gt;-->
+                    <!--&lt;!&ndash;<a href="">纯棉</a>&ndash;&gt;-->
+                    <!--&lt;!&ndash;<a href="">腈纶</a>&ndash;&gt;-->
+                    <!--&lt;!&ndash;<a href="">莱卡棉</a>&ndash;&gt;-->
+                    <!--&lt;!&ndash;<a href="">珀莉丝</a>&ndash;&gt;-->
+                <!--&lt;!&ndash;</dd>&ndash;&gt;-->
+            <!--&lt;!&ndash;</dl>&ndash;&gt;-->
+            <!--&lt;!&ndash;<dl>&ndash;&gt;-->
+                <!--&lt;!&ndash;<dt>&ndash;&gt;-->
+                    <!--&lt;!&ndash;<a href="">帽子</a>&ndash;&gt;-->
+                <!--&lt;!&ndash;</dt>&ndash;&gt;-->
+                <!--&lt;!&ndash;<dd>&ndash;&gt;-->
+                    <!--&lt;!&ndash;<a href="">棉纱</a>&ndash;&gt;-->
+                    <!--&lt;!&ndash;<a href="">纯棉</a>&ndash;&gt;-->
+                    <!--&lt;!&ndash;<a href="">腈纶</a>&ndash;&gt;-->
+                <!--&lt;!&ndash;</dd>&ndash;&gt;-->
+            <!--&lt;!&ndash;</dl>&ndash;&gt;-->
+            <!--&lt;!&ndash;<dl>&ndash;&gt;-->
+                <!--&lt;!&ndash;<dt>&ndash;&gt;-->
+                    <!--&lt;!&ndash;<a href="">鞋子</a>&ndash;&gt;-->
+                <!--&lt;!&ndash;</dt>&ndash;&gt;-->
+                <!--&lt;!&ndash;<dd>&ndash;&gt;-->
+                    <!--&lt;!&ndash;<a href="">皮革</a>&ndash;&gt;-->
+                    <!--&lt;!&ndash;<a href="">布</a>&ndash;&gt;-->
+                <!--&lt;!&ndash;</dd>&ndash;&gt;-->
+            <!--&lt;!&ndash;</dl>&ndash;&gt;-->
+        <!--&lt;!&ndash;</div>&ndash;&gt;-->
+    <!--&lt;!&ndash;</div>&ndash;&gt;-->
+<!--</li>-->
+<!--<li>-->
+    <!--<h4><a class="quick-item" href="">新品上市</a><i class="more-ico"></i>-->
+        <!--<p class="subcon">-->
+            <!--<a href="">男童</a>-->
+            <!--<a href="">女童</a>-->
+            <!--<a href="">家居童服</a>-->
+            <!--<a href="">男童</a>-->
+            <!--<a href="">女童</a>-->
+            <!--<a href="">家居童服</a>-->
+        <!--</p></h4>-->
+    <!--&lt;!&ndash;<div class="quick-sub-nav" style="display:none;">&ndash;&gt;-->
+        <!--&lt;!&ndash;<div class="quick-sub-navleft" >&ndash;&gt;-->
+            <!--&lt;!&ndash;<dl>&ndash;&gt;-->
+                <!--&lt;!&ndash;<dt>&ndash;&gt;-->
+                    <!--&lt;!&ndash;<a href="">腰带</a>&ndash;&gt;-->
+                <!--&lt;!&ndash;</dt>&ndash;&gt;-->
+                <!--&lt;!&ndash;<dd>&ndash;&gt;-->
+                    <!--&lt;!&ndash;<a href="">棉纱</a>&ndash;&gt;-->
+                    <!--&lt;!&ndash;<a href="">纯棉</a>&ndash;&gt;-->
+                    <!--&lt;!&ndash;<a href="">腈纶</a>&ndash;&gt;-->
+                    <!--&lt;!&ndash;<a href="">莱卡棉</a>&ndash;&gt;-->
+                    <!--&lt;!&ndash;<a href="">珀莉丝</a>&ndash;&gt;-->
+                <!--&lt;!&ndash;</dd>&ndash;&gt;-->
+            <!--&lt;!&ndash;</dl>&ndash;&gt;-->
+            <!--&lt;!&ndash;<dl>&ndash;&gt;-->
+                <!--&lt;!&ndash;<dt>&ndash;&gt;-->
+                    <!--&lt;!&ndash;<a href="">帽子</a>&ndash;&gt;-->
+                <!--&lt;!&ndash;</dt>&ndash;&gt;-->
+                <!--&lt;!&ndash;<dd>&ndash;&gt;-->
+                    <!--&lt;!&ndash;<a href="">棉纱</a>&ndash;&gt;-->
+                    <!--&lt;!&ndash;<a href="">纯棉</a>&ndash;&gt;-->
+                    <!--&lt;!&ndash;<a href="">腈纶</a>&ndash;&gt;-->
+                <!--&lt;!&ndash;</dd>&ndash;&gt;-->
+            <!--&lt;!&ndash;</dl>&ndash;&gt;-->
+            <!--&lt;!&ndash;<dl>&ndash;&gt;-->
+                <!--&lt;!&ndash;<dt>&ndash;&gt;-->
+                    <!--&lt;!&ndash;<a href="">鞋子</a>&ndash;&gt;-->
+                <!--&lt;!&ndash;</dt>&ndash;&gt;-->
+                <!--&lt;!&ndash;<dd>&ndash;&gt;-->
+                    <!--&lt;!&ndash;<a href="">皮革</a>&ndash;&gt;-->
+                    <!--&lt;!&ndash;<a href="">布</a>&ndash;&gt;-->
+                <!--&lt;!&ndash;</dd>&ndash;&gt;-->
+            <!--&lt;!&ndash;</dl>&ndash;&gt;-->
+        <!--&lt;!&ndash;</div>&ndash;&gt;-->
+    <!--&lt;!&ndash;</div>&ndash;&gt;-->
+<!--</li>-->
+<!--<li style=" border-bottom:none;">-->
+    <!--<h4><a class="quick-item" href="">新品上市</a><i class="more-ico"></i>-->
+        <!--<p class="subcon">-->
+            <!--<a href="">男童</a>-->
+            <!--<a href="">女童</a>-->
+            <!--<a href="">家居童服</a>-->
+            <!--<a href="">男童</a>-->
+            <!--<a href="">女童</a>-->
+            <!--<a href="">家居童服</a>-->
+        <!--</p></h4>-->
+    <!--&lt;!&ndash;<div class="quick-sub-nav" style="display:none;">&ndash;&gt;-->
+        <!--&lt;!&ndash;<div class="quick-sub-navleft" >&ndash;&gt;-->
+            <!--&lt;!&ndash;<dl>&ndash;&gt;-->
+                <!--&lt;!&ndash;<dt>&ndash;&gt;-->
+                    <!--&lt;!&ndash;<a href="">腰带</a>&ndash;&gt;-->
+                <!--&lt;!&ndash;</dt>&ndash;&gt;-->
+                <!--&lt;!&ndash;<dd>&ndash;&gt;-->
+                    <!--&lt;!&ndash;<a href="">棉纱</a>&ndash;&gt;-->
+                    <!--&lt;!&ndash;<a href="">纯棉</a>&ndash;&gt;-->
+                    <!--&lt;!&ndash;<a href="">腈纶</a>&ndash;&gt;-->
+                    <!--&lt;!&ndash;<a href="">莱卡棉</a>&ndash;&gt;-->
+                    <!--&lt;!&ndash;<a href="">珀莉丝</a>&ndash;&gt;-->
+                <!--&lt;!&ndash;</dd>&ndash;&gt;-->
+            <!--&lt;!&ndash;</dl>&ndash;&gt;-->
+            <!--&lt;!&ndash;<dl>&ndash;&gt;-->
+                <!--&lt;!&ndash;<dt>&ndash;&gt;-->
+                    <!--&lt;!&ndash;<a href="">帽子</a>&ndash;&gt;-->
+                <!--&lt;!&ndash;</dt>&ndash;&gt;-->
+                <!--&lt;!&ndash;<dd>&ndash;&gt;-->
+                    <!--&lt;!&ndash;<a href="">棉纱</a>&ndash;&gt;-->
+                    <!--&lt;!&ndash;<a href="">纯棉</a>&ndash;&gt;-->
+                    <!--&lt;!&ndash;<a href="">腈纶</a>&ndash;&gt;-->
+                <!--&lt;!&ndash;</dd>&ndash;&gt;-->
+            <!--&lt;!&ndash;</dl>&ndash;&gt;-->
+            <!--&lt;!&ndash;<dl>&ndash;&gt;-->
+                <!--&lt;!&ndash;<dt>&ndash;&gt;-->
+                    <!--&lt;!&ndash;<a href="">鞋子</a>&ndash;&gt;-->
+                <!--&lt;!&ndash;</dt>&ndash;&gt;-->
+                <!--&lt;!&ndash;<dd>&ndash;&gt;-->
+                    <!--&lt;!&ndash;<a href="">皮革</a>&ndash;&gt;-->
+                    <!--&lt;!&ndash;<a href="">布</a>&ndash;&gt;-->
+                <!--&lt;!&ndash;</dd>&ndash;&gt;-->
+            <!--&lt;!&ndash;</dl>&ndash;&gt;-->
+        <!--&lt;!&ndash;</div>&ndash;&gt;-->
+    <!--&lt;!&ndash;</div>&ndash;&gt;-->
+<!--</li>-->
+
+</ul>
+</div>
+<!-- category end-->
+</div>
+</div>
+<ul class="main-menu">
+
+    <li class="current first">
+        <a target="_blank" href="/">首页</a>
+    </li>
+    <!--{foreach from=$subcategory item=nav}-->
+    <li>
+        <a  class="{if !$index and $nav.link eq $current_url}current{else}{/if}" {if $nav.open_new} target="_blank"{/if}
+        href="index.php?app=search&cate_id={$nav.id}">{$nav.value|escape}</a>
+    </li>
+    <!--{/foreach}-->
+</ul>
+</div>
+<!-- nav end-->
+<div class="clear"></div>
+</div>
+<div class="main-top">
+    <!-- bannerr-->
+    <div class="top-banner2" id="full-screen-slider">
+        <ul id="slides">
+            <li style="background:url('/themes/mall/default/styles/default/web/img/banner1.png') no-repeat center">
+                <a href="" target="_blank"></a>
+            </li>
+            <li style="background:url('/themes/mall/default/styles/default/web/img/banner2.jpg') no-repeat center">
+                <a href="" target="_blank"></a>
+            </li>
+        </ul>
+    </div>
+    <!--banner-->
+</div>
+<div class="clear"></div>
+<!-- middle  -->
+<!--<div class="main-middle">-->
+    <!--<div class="left">-->
+        <!--<ul class="t">-->
+            <!--<h2>最新动态</h2>-->
+            <!--<li>-->
+                <!--<a herf="">7qcd.com会员过亿啦!</a>-->
+            <!--</li>-->
+            <!--<li>-->
+                <!--<a herf="">揭秘:义乌红火库存生意的背后</a>-->
+            <!--</li>-->
+            <!--<li>-->
+                <!--<a herf="">东墙补西墙 钢贸商困境求生</a>-->
+            <!--</li>-->
+            <!--<li>-->
+                <!--<a herf="">职场新人，让美丽恰到好处</a>-->
+            <!--</li>-->
+        <!--</ul>-->
+        <!--<div class="m"><img src="img/adl.png">-->
+        <!--</div>-->
+        <!--<div class="b"><img src="img/adpic.jpg">-->
+        <!--</div>-->
+    <!--</div>-->
+    <!--<div class="right">-->
+        <!--<div class="slideTxtBox">-->
+            <!--<div class="hd0">-->
+                <!--<ul id="myTab0">-->
+                    <!--<li class="active" onmouseover="nTabs(this,0);">-->
+                        <!--<a href="">爆款推荐</a>-->
+                    <!--</li>-->
+                    <!--<li style="border-left:none;" class="normal"onmouseover="nTabs(this,1);">-->
+                        <!--<a href="">特惠商品</a>-->
+                    <!--</li>-->
+                <!--</ul>-->
+            <!--</div>-->
+            <!--<div class="bd0">-->
+                <!--<ul id="myTab0_Content0">-->
+                    <!--<li>-->
+                        <!--<a href="">-->
+                            <!--<div class="image"><img alt="" title="" src="img/pro2.jpg">-->
+                            <!--</div><h3>嫒宝时针织开衫法国女童装</h3>-->
+                            <!--<div class="price">-->
+                                <!--优惠价：￥180<span>￥498</span>-->
+                            <!--</div></a>-->
+                    <!--</li>-->
+                    <!--<li>-->
+                        <!--<a href="">-->
+                            <!--<div class="image"><img alt="" title="" src="img/pro2.jpg">-->
+                            <!--</div><h3>嫒宝时针织开衫法国女童装</h3>-->
+                            <!--<div class="price">-->
+                                <!--优惠价：￥180<span>￥498</span>-->
+                            <!--</div></a>-->
+                    <!--</li>-->
+                    <!--<li>-->
+                        <!--<a href="">-->
+                            <!--<div class="image"><img alt="" title="" src="img/pro2.jpg">-->
+                            <!--</div><h3>嫒宝时针织开衫法国女童装</h3>-->
+                            <!--<div class="price">-->
+                                <!--优惠价：￥180<span>￥498</span>-->
+                            <!--</div></a>-->
+                    <!--</li>-->
+                    <!--<li>-->
+                        <!--<a href="">-->
+                            <!--<div class="image"><img alt="" title="" src="img/pro2.jpg">-->
+                            <!--</div><h3>嫒宝时针织开衫法国女童装</h3>-->
+                            <!--<div class="price">-->
+                                <!--优惠价：￥180<span>￥498</span>-->
+                            <!--</div></a>-->
+                    <!--</li>-->
+                <!--</ul>-->
+                <!--<ul id="myTab0_Content1" class="none">-->
+                    <!--<li>-->
+                        <!--<a href="">-->
+                            <!--<div class="image"><img alt="" title="" src="img/pro2.jpg">-->
+                            <!--</div><h3>巴拉巴拉针织开衫法国童装</h3>-->
+                            <!--<div class="price">-->
+                                <!--优惠价：￥180<span>￥498</span>-->
+                            <!--</div></a>-->
+                    <!--</li>-->
+                    <!--<li>-->
+                        <!--<a href="">-->
+                            <!--<div class="image"><img alt="" title="" src="img/pro2.jpg">-->
+                            <!--</div><h3>嫒宝时针织开衫法国女童装</h3>-->
+                            <!--<div class="price">-->
+                                <!--优惠价：￥180<span>￥498</span>-->
+                            <!--</div></a>-->
+                    <!--</li>-->
+                    <!--<li>-->
+                        <!--<a href="">-->
+                            <!--<div class="image"><img alt="" title="" src="img/pro2.jpg">-->
+                            <!--</div><h3>嫒宝时针织开衫法国女童装</h3>-->
+                            <!--<div class="price">-->
+                                <!--优惠价：￥180<span>￥498</span>-->
+                            <!--</div></a>-->
+                    <!--</li>-->
+                    <!--<li>-->
+                        <!--<a href="">-->
+                            <!--<div class="image"><img alt="" title="" src="img/pro2.jpg">-->
+                            <!--</div><h3>嫒宝时针织开衫法国女童装</h3>-->
+                            <!--<div class="price">-->
+                                <!--优惠价：￥180<span>￥498</span>-->
+                            <!--</div></a>-->
+                    <!--</li>-->
+                <!--</ul>-->
+            <!--</div>-->
+        <!--</div>-->
+    <!--</div>-->
+<!--</div>-->
+<!-- middle  -->
+<div class="clear"></div>
+<!-- bottom  -->
+<div class="bottom">
+<div class="banner2">
+    <img alt="" title="" src="/themes/mall/default/styles/default/web/img/banner-pic.jpg">
+</div>
+
+<!-- {foreach from=$goods_list item=category name=category} -->
+<!--{if $smarty.foreach.category.iteration<6}-->
+<div class="pro">
+    <div class="pro-title t{$smarty.foreach.category.iteration}">
+        <h1>{$category.cate_name|escape}</h1>
+        <div class="title-l">
+            热门品牌推荐： <a href="">笛莎 </a>
+            <a href="">B-巴拉巴拉 </a>
+            <a href="">Disney</a>
+            <a href="">米奇丁当</a>
+            <a href="">史努比</a>
+            <a href="">摩登小姐</a>
+        </div>
+        <div class="title-r">
+            <a href="index.php?app=search&cate_id={$category.cate_id}">下周新品 抢鲜开售>></a>
+        </div>
+    </div>
+    <ul>
+        <!--{foreach from=$category.goods_list item=goods}-->
+        <li>
+            <a href="">
+                <div class="image">
+                    <a href="{url app=goods&id=$goods.goods_id}" target="_blank"><img width="170" height="170" src="{$goods.default_image}" /></a>
+                </div>
+                <h3 style="width:150px;white-space:nowrap; word-break:keep-all;overflow:hidden;text-overflow:ellipsis;">{$goods.goods_name|escape}</h3>
+                <div class="price">
+                    优惠价：{$goods.price|price}
+                </div></a>
+        </li>
+        <!--{/foreach}-->
+    </ul>
+</div>
+<!--{/if}-->
+<!-- {/foreach} -->
+
+
+
+</div>
+<!-- bottom  -->
+<div class=" clear"></div>
+<!-- footer  -->
+
+<div class="footer">
+    <div class="footer-box">
+        <div class="footer-nav">
+            <dl>
+                <dt>
+                    新手指南
+                </dt>
+                <dd>
+                    <a href="">免费注册</a>
+                </dd>
+                <dd>
+                    <a href="">买家入门</a>
+                </dd>
+                <dd>
+                    <a href="">卖家入门</a>
+                </dd>
+                <dd>
+                    <a href="">在线帮助</a>
+                </dd>
+            </dl>
+            <dl>
+                <dt>
+                    交易安全
+                </dt>
+                <dd>
+                    <a href="">买家防骗</a>
+                </dd>
+                <dd>
+                    <a href="">交易纠纷</a>
+                </dd>
+                <dd>
+                    <a href="">投诉举报</a>
+                </dd>
+            </dl>
+            <dl>
+                <dt>
+                    采购商服务
+                </dt>
+                <dd>
+                    <a href="">找公司</a>
+                </dd>
+                <dd>
+                    <a href="">找产品</a>
+                </dd>
+                <dd>
+                    <a href="">进货单</a>
+                </dd>
+                <dd>
+                    <a href="">产业带地图</a>
+                </dd>
+            </dl>
+            <dl>
+                <dt>
+                    产业带入驻
+                </dt>
+                <dd>
+                    <a href="">供应商入驻</a>
+                </dd>
+                <dd>
+                    <a href="">政府入驻</a>
+                </dd>
+                <dd>
+                    <a href="">第三方服务入驻</a>
+                </dd>
+                <dd>
+                    <a href="">入驻常见问题</a>
+                </dd>
+            </dl>
+            <dl>
+                <dt>
+                    产业带特色
+                </dt>
+                <dd>
+                    <a href="">源头好货产地直供</a>
+                </dd>
+                <dd>
+                    <a href="">直达产地明星大厂</a>
+                </dd>
+                <dd>
+                    <a href="">汇聚全国专业市场</a>
+                </dd>
+                <dd>
+                    <a href="">合作方：南通尽在</a>
+                </dd>
+            </dl>
+        </div>
+        <div class="contactus">
+            <div class="mark"><img alt="" title="" src="/themes/mall/default/styles/default/web/img/mark.png">
+            </div>
+            <div class="mark-num">
+                欢迎加入七彩岛
+                <br/>
+                <span>微信号：</span>qcdtz
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>

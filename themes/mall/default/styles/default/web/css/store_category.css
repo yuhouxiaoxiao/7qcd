@@ -1,0 +1,43 @@
+/* 手风琴 */
+
+h3 a,h3.open{background: url("../img/category-pic.jpg") no-repeat;}
+
+.col {
+	width: 200px;
+	margin-right:32px;
+	margin-bottom: 10px;
+	padding:8px;
+}
+
+.col li{background:url(../img/arrow.png) no-repeat 5px center;width:158px;height:28px;line-heigt:28px;border:1px solid #ddd;padding-left:20px;margin:5px 5px 5px 8px;}
+
+h3 {margin: 0;}
+h3 a {
+	background-position:0px 8px;
+	width:200px;
+	height:20px;
+	display:block;
+	padding: 10px;
+	margin: 0;
+	color: #444;
+	text-decoration: none;
+	font-weight: bold;
+}
+
+h3.open{background-position:-10px -40px;}
+h3 + div {padding: 10px;}
+h3+div {display: none;}
+
+ .c1 {
+ margin-right: 0;
+ margin-bottom: 0;
+}
+
+/* 焦点图 */
+.slideBox{ width:768px; height:288px; overflow:hidden; position:relative; border:1px solid #ddd;margin-bottom:8px;}
+.slideBox .hd{ height:20px; overflow:hidden; position:absolute; right:10px; bottom:10px; z-index:1; }
+.slideBox .hd ul{ overflow:hidden; zoom:1; float:left;  }
+.slideBox .hd ul li{ float:left; margin-right:5px;width:20px; height:20px; line-height:20px; text-align:center; background:#fff; cursor:pointer; }
+.slideBox .hd ul li:hover,.slideBox .hd ul li.on{ background:#666; color:#fff; }
+.slideBox .bd{ position:relative; height:100%; z-index:0;}
+.slideBox .bd img{width:768px; height:288px;display:block;}

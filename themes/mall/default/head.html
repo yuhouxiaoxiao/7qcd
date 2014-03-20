@@ -1,0 +1,34 @@
+<base href="{$site_url}/" />
+<!-- Use IE7 mode -->
+<meta name="baidu-tc-verification" content="1d101b998bb124a527252af6a8a06811" />
+<meta http-equiv="X-UA-Compatible" content="IE=EmulateIE7 charset={$charset}" />
+<meta http-equiv="Content-Type" content="text/html; charset={$charset}" />
+{$page_seo}
+
+<link href="{res file=css/ecmall.css}" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="index.php?act=jslang"></script>
+<script type="text/javascript" src="{lib file=jquery.js}" charset="utf-8"></script>
+<script type="text/javascript" src="{lib file=ecmall.js}" charset="utf-8"></script>
+<script type="text/javascript" src="{res file=js/nav.js}" charset="utf-8"></script>
+<script type="text/javascript" src="{res file=js/select.js}" charset="utf-8"></script>
+<script type="text/javascript">
+//<!CDATA[
+var SITE_URL = "{$site_url}";
+var REAL_SITE_URL = "{$real_site_url}";
+var PRICE_FORMAT = '{$price_format}';
+
+$(function(){
+    var select_list = document.getElementById("select_list");
+    var float_list = document.getElementById("float_list");
+    select_list.onmouseover = function () {
+        float_list.style.display = "block";
+    };
+    select_list.onmouseout = function () {
+        float_list.style.display = "none";
+    };
+});
+//]]>
+</script>
+
+{$_head_tags}
+<!--<editmode></editmode>-->

@@ -1,0 +1,139 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="description" content=""/>
+    <meta name="keywords" content=""/>
+    <title>7彩岛——专业的童装产业链网</title>
+    <link href="{res file=web/css/style.css}" rel="stylesheet" type="text/css"/>
+    <link href="{res file=web/css/js.css}" rel="stylesheet" type="text/css"/>
+    <script type="text/javascript" src="{res file=web/js/jquery-1.4.2.min.js}"></script>
+    <script type="text/javascript" src="{res file=web/js/layer.js}"></script>
+    {include file="header_mall.html"}
+</head>
+<body style="background:#f2f2f2">
+
+<script type="text/javascript">
+    $(function(){
+        $('#login_form').validate({
+            errorPlacement: function(error, element){
+                $(element).parent('td').append(error);
+            },
+            success       : function(label){
+                label.addClass('validate_right').text('OK!');
+            },
+            onkeyup : false,
+            rules : {
+                user_name : {
+                    required : true
+                },
+                password : {
+                    required : true
+                },
+                captcha : {
+                    required : true,
+                    remote   : {
+                        url : 'index.php?app=captcha&act=check_captcha',
+                        type: 'get',
+                        data:{
+                            captcha : function(){
+                                return $('#captcha1').val();
+                            }
+                        }
+                    }
+                }
+            },
+            messages : {
+                user_name : {
+                    required : '{$lang.user_name_required}'
+                },
+                password  : {
+                    required : '{$lang.password_required}'
+                },
+                captcha : {
+                    required : '{$lang.captcha_required}',
+                    remote   : '{$lang.captcha_error}'
+                }
+            }
+        });
+    });
+</script>
+
+
+<!-- header-->
+<!-- topnavp -->
+<!-- topnav end   -->
+<!-- layout head  -->
+<div class="layout">
+    <div class="logo2">
+        <a href="/"><img src="/themes/mall/default/styles/default/web/img/logo_h.gif" title="7彩岛" class="logo-pic"/></a>
+    </div>
+    <div class="welcome">
+        <div class="welcome-txt">
+            欢迎登录
+        </div>
+    </div>
+</div>
+<!-- layout head  end-->
+<!-- main-->
+<div class="maintop">
+    <div class="login-box">
+        <div class="login-bd-left"></div>
+        <form class="bd-personal" method="post" action="" id="">
+            <div class="item bottom">
+                <span>邮箱/用户名/已验证手机：</span>
+                <div>
+                    <input type="text" id="user_name" name="user_name" class="txt regname-icon" autocomplete="off" onpaste="" value="" onfocus="">
+                </div>
+            </div>
+            <div class="password">
+                <div class="item">
+                    <span>密 码：</span>
+                    <div class="reg-input">
+                        <input type="password" id="password" name="password" class="txt password-icon" onpaste="return  false" autocomplete="off" sta="0">
+                    </div>
+                </div>
+            </div>
+            <div class="item">
+                <span class="label">&nbsp;</span>
+                <div class="reg-input">
+                    <input type="checkbox" class="checkbox" checked="checked" id="readme" onclick="reg();">
+                    <label for="protocol">自动登录
+                        <!--<a href="{url app=find_password}" class="blue" id="protocol"> 忘记密码？</a>-->
+                    </label>
+                    <!--<a href="{url app=find_password}" class="clew">{$lang.forget_password}</a>-->
+                </div>
+            </div>
+            <div class="item">
+                <div class="reg-input">
+                    <input type="hidden" name="ret_url" value="{$ret_url}" />
+                    <input type="submit" name="Submit" class="btn-login" id="loginsubmit" value="登录">
+                    <input type="button" class="btn-regist2"  value="免费注册" onclick="location.href='index.php?app=member&act=register'">
+                    <!--<a class="btn-regist2" href="index.php?app=member&act=register">免费注册</a>-->
+                </div>
+            </div>
+            <div class="clear">
+                &nbsp;
+            </div>
+            <div class="item" >
+                <label class="item-l-box"> 使用合作网站账号登录七彩岛： <div class=" clear"></div> <span class="btns"><a href="" onclick="">QQ</a></span> <span class="btns"><s>|</s><a href="" onclick="">新浪微博</a></span> <span class="btns"><s>|</s><a href="" onclick="">网易</a></span> <span class="btns"><s>|</s><a href="" onclick="">人人</a></span> <span class="btns"><s>|</s><a href="" onclick="">奇虎360</a></span> <span class="btns"><s>|</s><a href="" onclick="">开心</a></span> <span class="btns"><s>|</s><a href="" onclick="" >豆瓣</a></span> <span class="btns"><s>|</s><a href="" onclick="">更多&gt;&gt;</a></span> </label>
+            </div>
+        </form>
+    </div>
+</div>
+<div class=" clear"></div>
+<!-- footer  -->
+<div class="footer2-box">
+    <div class="footer2">
+        <div class="links">
+            <a rel="nofollow" target="_blank" href="">关于我们</a>| <a rel="nofollow" target="_blank" href="">联系我们</a>| <a rel="nofollow" target="_blank" href="">人才招聘</a>| <a target="_blank" href="">商家入驻</a>| <a target="_blank" href="">广告服务</a>| <a href="/" target="_blank">友情链接</a>| <a href="" target="_blank">销售联盟</a>
+        </div>
+        <div class="copyright">
+            Copyright©2004-2013&nbsp;&nbsp;7彩岛7qcd.com&nbsp;版权所有
+        </div>
+    </div>
+</div>
+<div id="TB_overlayBG"></div>
+
+</body>
+</html>

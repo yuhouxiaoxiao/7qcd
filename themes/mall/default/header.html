@@ -1,0 +1,79 @@
+<!-- topnavp -->
+<div class="top-banner">
+    <div class="site-nav">
+        <p class="login-info">
+
+            {$lang.hello},{$visitor.user_name|escape}
+            <!--{if !$visitor.user_id}-->
+            <span>| <a href="{url app=member&act=login&ret_url=$ret_url}">请登录</a></span><span>|
+            <a href="{url app=member&act=register&ret_url=$ret_url}">免费注册</a></span>
+            <!--{else}-->
+              您好，尊敬的 <span class="member"><a href="">七彩岛会员</a></span> <span class="member">| <a href="{url app=member&act=logout}">退出</a></span>
+            <!--{/if}-->
+        </p>
+        <p class="quick-menu">
+            <a href="/index.php?app=member">用户中心</a><span>|</span><a href="index.php?app=cart">购物车(0)</a><span>|</span><a class="sina" href="">新浪微博</a><span>|</span><a class="qq" href="">腾讯微博</a>
+        </p>
+    </div>
+</div>
+<!-- topnav end   -->
+<!-- layout head  -->
+<div class="layout" style="margin-bottom:0px;">
+    <div class="logo">
+        <a href="/">
+            <img src="/themes/mall/default/styles/default/web/img/logo.jpg" title="7彩岛" class="logo-pic"/>
+        </a>
+        <img style="margin-left: -35px;" src="/themes/mall/default/styles/default/web/img/mark.png" title="7彩岛" class="logo-pic"/>
+    </div>
+    <div class="right-search">
+        <div class="search">
+            <dl>
+                <dt>
+                    <input type="text" name="keyword"  id="keyword" placeholder="请输入产品名称" class="searchtext"/>
+                </dt>
+                <input value="搜 索" type="button" class="search_button" />
+            </dl>
+        </div>
+        <div class="keyword">
+            <p>
+                热门搜索：
+            </p>
+            <p>
+                <!--{foreach from=$hot_keywords item=keyword}-->
+                <a href="{url app=search&keyword=$keyword}">{$keyword}</a>
+                <!--{/foreach}-->
+
+            </p>
+        </div>
+    </div>
+</div>
+
+<!-- nav -->
+<div class="main-nav">
+    <div class="main-nav-box">
+        <ul class="nav_l">
+            <li >
+                <a href="/" class="current">首页</a>
+            </li>
+            <!--{foreach from=$navs.middle item=nav}-->
+            <li>
+                <a  class="{if !$index and $nav.link eq $current_url}current{else}{/if}" {if $nav.open_new} target="_blank"{/if} href="{$nav.link}">{$nav.title|escape}</a>
+            </li>
+            <!--{/foreach}-->
+
+        </ul>
+        <span></span>
+        <ul class="nav_r">
+            <li>
+                <a href="index.php?app=apply">我要开店</a>
+            </li>
+            <!--<li>-->
+                <!--<a href="">代理加盟</a>-->
+            <!--</li>-->
+            <!--<li>-->
+                <!--<a href="">童装咨询</a>-->
+            <!--</li>-->
+        </ul>
+    </div>
+</div>
+<!-- nav end-->

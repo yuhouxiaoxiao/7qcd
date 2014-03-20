@@ -1,0 +1,75 @@
+/* CSS Document */
+
+.preview {
+	text-align: center; 
+	width: 464px;
+}
+.jqzoom {
+	border: 1px solid #ddd; 
+	width: 460px; 
+	margin-bottom: 10px; 
+	height: 460px; 
+	overflow: hidden; 
+	position: relative;
+}
+.zoomdiv {
+	border: 1px solid #e4e4e4; 
+	position: absolute; 
+	text-align: center;
+	display: none; 
+	background: url(../images/loading.gif) #fff no-repeat center center; 
+	overflow: hidden;
+	top: 1px; 
+	left: 0px;
+	width: 460px; 
+	height:460px; 
+	z-index: 100; 
+}
+.spec {
+	width: 360px;
+	margin: 0 auto;
+}
+/*.specLeftT {position: absolute; width: 5px; background: url(../images/proddetlicon.gif) no-repeat -157px 0px; float: left; height: 9px; top: 17px; cursor: pointer; left: 0px}
+.specRightT {position: absolute; width: 5px; background: url(../images/proddetlicon.gif) no-repeat -164px 0px; float: left; height: 9px; top: 17px; cursor: pointer; right: 0px}
+.specLeftF {position: absolute; width: 5px; background: url(../images/proddetlicon.gif) no-repeat -145px 0px; float: left; height: 9px; top: 17px; cursor: pointer; left: 0px}
+.specRightF {position: absolute; width: 5px; background: url(../images/proddetlicon.gif) no-repeat -151px 0px; float: left; height: 9px; top: 17px; cursor: pointer; right: 0px}
+*/
+
+.speclist li {width: 64px; display: inline; float: left; margin: 0 4px}
+.speclist li a {
+	display: block;
+	border: 1px solid #fff;
+}
+.speclist li img {
+	border: 1px solid #d9d9d9;
+	width: 60px; 
+	height: 60px;
+}
+.speclist li.current a{
+	border: 0 none;
+}
+.speclist li.current img{
+	border: 2px solid #e5004f;
+}
+.jqZoomPup {
+	border: 1px solid #f281a8; 
+	z-index: 10; 
+	position: absolute; 
+	background: #fff;
+	filter: alpha(opacity=50); 
+	width: 215px!important;
+	height: 215px!important; 
+	visibility: hidden; 
+	top: 0px; 
+	cursor: move;
+	left: 0px; 
+	opacity: 0.5; 
+	-moz-opacity: 0.5; 
+	-khtml-opacity: 0.5
+}
+.speclist {
+	width: 360px; 
+	height: 64px; 
+	overflow: hidden; 
+	
+}

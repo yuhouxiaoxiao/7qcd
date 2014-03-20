@@ -1,0 +1,738 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="description" content=""/>
+    <meta name="keywords" content=""/>
+    <title>7彩岛——专业的童装产业链网</title>
+    <link href="{res file=web/css/style.css}" rel="stylesheet" type="text/css"/>
+    <link href="{res file=web/css/js.css}" rel="stylesheet" type="text/css"/>
+    <script type="text/javascript" src="{res file=web/js/slidetxtbox.js}"></script>
+    <link href="{res file=web/css/merge.css}" rel="stylesheet" type="text/css"/>
+    <style type="text/css">
+        .layout {
+            height: auto;
+        }
+    </style>
+</head>
+<body>
+<!-- header-->
+{include file=header.html}
+<!-- layout head  end-->
+<!-- header-->
+
+<div class="module_common">
+<h2><b class="news" title="NEWS公告栏"></b></h2>
+<div class="wrap">
+<div class="wrap_child">
+    <ul class="news_list">
+        <!--{foreach from=$widget_data.notices item=article}-->
+        <li>{$article.add_time|date:m-d} <a href="{url app=article&act=view&article_id=$article.article_id}" title="{$article.title|escape}">{$article.title|escape}</a></li>
+        <!--{/foreach}-->
+    </ul>
+    <div class="ad_news">
+        <!-- {if $widget_data.ad_image_url} -->
+        <a href="{$widget_data.ad_link_url}" target="_blank"><img src="{$widget_data.ad_image_url}" width="180" height="60" /></a>
+        <!-- {/if} -->
+    </div>
+</div>
+
+<!-- main-->
+<div class="maintop">
+    <div class="left">
+        <div class="note-header">
+            <h2>网站公告</h2>
+        </div>
+        <div class=" clear"></div>
+        <div class="txt0">
+            <ul>
+                <!--{widgets page=index area=widget_notice}-->
+
+
+
+
+
+            </ul>
+        </div>
+    </div>
+    <div class="center" >
+        <div class="slideBox" >
+            <div class="bd" id="idTransformView">
+                <ul  id="idSlider">
+                    <li><img src="/themes/mall/default/styles/default/web/img/pic1.jpg" />
+                    </li>
+                    <li><img src="/themes/mall/default/styles/default/web/img/pic1.jpg" />
+                    </li>
+                    <li><img src="/themes/mall/default/styles/default/web/img/pic1.jpg" />
+                    </li>
+                </ul>
+            </div>
+            <div class="hd" id="idNum">
+                <ul>
+                    <li>
+                        1
+                    </li>
+                    <li>
+                        2
+                    </li>
+                    <li>
+                        3
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="right">
+        <div class="login-nav">
+            <a title="马上注册，做生意、交商友、订阅行情"  href="{url app=member&act=login&ret_url=$ret_url}">免费注册</a>
+            <a title="马上登录，享受会员专属服务" href="{url app=member&act=register&ret_url=$ret_url}">登 录</a>
+        </div>
+        <div class="slideTxtBox">
+            <div class="hd0">
+                <ul id="myTab0">
+                    <li class="active" onmouseover="nTabs(this,0);">
+                        <a href="">企业服务</a>
+                    </li>
+                    <li class="normal" onmouseover="nTabs(this,1);">
+                        <a href="">个人服务</a>
+                    </li>
+                    <li style="border-right:none;" class="normal"onmouseover="nTabs(this,2);">
+                        <a href="">新手上路</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="bd0">
+                <ul id="myTab0_Content0">
+                    <li>
+                        <span class="date">[买家入门]</span><a href="">怎样发布询盘信息？</a>
+                    </li>
+                    <li>
+                        <span class="date">[买家入门]</span><a href="">如何发布产息？</a>
+                    </li>
+                    <li>
+                        <span class="date">[买家入门]</span><a href="">怎样发布询购信息？</a>
+                    </li>
+                    <li>
+                        <span class="date">[买家入门]</span><a href="">如何发布信息？</a>
+                    </li>
+                </ul>
+                <ul id="myTab0_Content1" class="none">
+                    <li>
+                        <span class="date">[买家入门]</span><a href="">名师教作文：３妙招巧</a>
+                    </li>
+                    <li>
+                        <span class="date">[买家入门]</span><a href="">耶鲁小子：教你备考SAT</a>
+                    </li>
+                    <li>
+                        <span class="date">[买家入门]</span><a href="">施强：高端专业语言教学</a>
+                    </li>
+                    <li>
+                        <span class="date">[买家入门]</span><a href="">数理化老师竟也看</a>
+                    </li>
+                </ul>
+                <ul id="myTab0_Content2" class="none">
+                    <li>
+                        <span class="date">[买家入门]</span><a href="">澳大利亚八大名校招</a>
+                    </li>
+                    <li>
+                        <span class="date">[买家入门]</span><a href="">2012世界大学</a>
+                    </li>
+                    <li>
+                        <span class="date">[买家入门]</span><a href="">新加坡留学，国际</a>
+                    </li>
+                    <li>
+                        <span class="date">[买家入门]</span><a href="">高考后留学日本名校</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+<div class=" clear"></div>
+<!--<div>-->
+<!--<ul class="ad_top">-->
+    <!--<li>-->
+        <!--<a href=""><img title="" alt="" src="/themes/mall/default/styles/default/web/img/ad1.jpg"></a>-->
+    <!--</li>-->
+    <!--<li>-->
+        <!--<a href=""><img title="" alt="" src="/themes/mall/default/styles/default/web/img/ad2.jpg"></a>-->
+    <!--</li>-->
+    <!--<li>-->
+        <!--<a href=""><img title="" alt="" src="/themes/mall/default/styles/default/web/img/ad1.jpg"></a>-->
+    <!--</li>-->
+    <!--<li style="margin-right:0px;">-->
+        <!--<a href=""><img title="" alt="" src="/themes/mall/default/styles/default/web/img/ad2.jpg"></a>-->
+    <!--</li>-->
+<!--</ul>-->
+<!--</div>-->
+
+<!-- 中间广告 start -->
+<div class="center-banner">
+    <a href="" ><img src="/themes/mall/default/styles/default/web/img/banner.jpg"/></a>
+</div>
+<!-- 中间广告 end -->
+<!-- 产品 start -->
+
+
+<!----category--->
+<div id="content">
+<div class="content-wrap">
+<div id="content-inner" class="layout" style="position:relative;padding-top:0;">
+
+
+
+<div id="industry-layout" class="layout" style="padding-top:0;">
+<div class="mod-ind" data-index="2" id="test" data-short-title="服装" data-long-title="服装啊" data-indust-id="33" data-spm="794253845">
+    <div class="header">
+        <span class="index"><a href="#" data-spm-anchor-id="a260k.635.794253845.1">1F</a></span>
+        <h1 class="title ms-yh"><a href="http://plas7qcd.com">服装</a></h1>
+    </div>
+    <div class="content">
+        <div class="hot mod-spm" data-spm="794253977">
+            <div class="inst-belt">
+                <a href="http://fuzhuang7qcd.com/huodong/yichaodaodi/index.html?spm=a260k.635.794253977.1" class="a-img belt-img" data-spm-anchor-id="a260k.635.794253977.1">
+                    <img alt="" src="/themes/mall/default/styles/default/web/img/gznz.jpg" style="zoom: 1;">
+                </a>
+                <ul class="fd-clr">
+                    <li><a href="http://ye7qcd.com/chandi/fuzhuang/nvzhuang/1034162-.htm?beltTags=16129&amp;sortType=SALE_QUANTITY">平湖羽绒服</a></li>
+                    <li><a href="http://ye7qcd.com/chandi/fuzhuang/nvzhuang.htm?beltTags=5377&amp;priceMin=100&amp;sortType=MLR_RETURNED_CUSTOMER">精品时装</a></li>
+                    <li><a href="http://ye7qcd.com/chandi/fuzhuang/nanzhuang.htm?spm=a3604.2235421.0.0&amp;beltTags=11521">品牌男装</a></li>
+                    <li><a href="http://wholesale7qcd.com/xshow/ushow_1_3_101.htm?ins=101&amp;province=%D5%E3%BD%AD&amp;showProvince=%C9%DC%D0%CB&amp;city=%C9%DC%D0%CB&amp;isMultiColor=false&amp;isMultiSize=false&amp;categoryId=1043350&amp;showSign=1%2C3&amp;feature=&amp;sortType=&amp;priceLow=&amp;priceHigh=&amp;quantityBegin=0&amp;onlineStatus=false&amp;memberTag=&amp;offerTag=&amp;star=false&amp;taohot=false#mod-filter">诸暨袜乡</a></li>
+                </ul>
+            </div>
+            <div class="text">
+                <ul>
+                    <li><a href="http://wholesale7qcd.com/xshow/fashion_list.htm?tags=15618&amp;tracelog=nzchaohuo_hutou"><span class="cat">[女装] </span>女装潮货馆开张，时髦尖货市场</a></li>
+                    <li><a href="http://view7qcd.com/cms/promotion/youg/nanz.html"><span class="cat">[男装] </span>冬季热门货源，千万一手货云集</a></li>
+                    <li><a href="http://fuzhuang7qcd.com/huodong/neiyi/wenxiong.html"><span class="cat">[内衣] </span>品质文胸爆款汇，全场7折起！</a></li>
+                </ul>
+            </div>                    </div>
+        <div class="category mod-spm" data-spm="794253853">
+
+
+
+            <!-- {foreach from=$cate_fz item=category name=fe_gcate} -->
+            <!-- {foreach from=$category.children item=child} -->
+            <div class="cat-cell">
+                <h3 class="cat-title"> <a href="{url app=search&cate_id=$child.id}">{$child.value|escape}</a></h3>
+                <ul>
+                    <!-- {foreach from=$child.children item=subchild} -->
+                    <li><a href="{url app=search&cate_id=$subchild.id}">{$subchild.value|escape}</a></li>
+                    <!-- {/foreach} -->
+                </ul>
+            </div>
+            <!-- {/foreach} -->
+
+            <!-- {/foreach} -->
+
+
+
+
+
+
+
+
+        </div>
+        <div class="banner mod-spm" data-spm="794253857">
+            <a href="http://plas7qcd.com/huodong/1118xsjuhui.html" class="a-img">
+                <img alt="" src="/themes/mall/default/styles/default/web/img/fz.jpg" style="zoom: 1;">
+
+            </a>
+
+        </div>
+    </div>
+</div>
+
+<div class="mod-ind" data-index="1" id="" data-short-title="橡塑" data-long-title="橡胶塑料" data-indust-id="33" data-spm="794253845">
+    <div class="header"><span class="index"><a href="＃" data-spm-anchor-id="a260k.635.794253845.1">2F</a></span>
+        <h1 class="title ms-yh"><a href="http://plas7qcd.com">童装</a></h1>
+    </div>
+    <div class="content">
+        <div class="hot mod-spm" data-spm="794254041">
+            <div class="inst-belt">
+                <a href="http://s7qcd.com/selloffer/offer_search.htm?spm=a260k.635.794254041.1&amp;city=%B7%F0%C9%BD&amp;priceStart=20.0&amp;province=%B9%E3%B6%AB&amp;keywords=%CD%AF%D7%B0&amp;from=industrySearch&amp;industryFlag=muying&amp;n=y&amp;filt=y" class="a-img belt-img" data-spm-anchor-id="a260k.635.794254041.1">
+                    <img alt="" src="/themes/mall/default/styles/default/web/img/fstz.jpg" style="zoom: 1;"></a>
+
+                <ul class="fd-clr">
+                    <li><a href="http://zhili7qcd.com/">织里童装</a></li>
+                    <li><a href="http://jimo7qcd.com/youshihangye/tongzhuang.htm">即墨童装</a></li>
+                    <li><a href="http://chenghai7qcd.com/">澄海玩具</a></li>
+                    <li><a href="http://s7qcd.com/selloffer/offer_search.htm?city=%D2%E5%CE%DA%CA%D0&amp;keywords=%CD%E6%BE%DF&amp;categoryId=0&amp;from=marketSearch&amp;n=y&amp;filt=y">义乌玩具</a></li>
+                </ul>
+            </div>
+            <div class="text">
+                <ul>
+                    <li><a href="http://wholesale7qcd.com/xshow/ushow_1_3_102.htm?spm=a262n.6633621.370461333.183&amp;onlineStatus=false&amp;sortType=&amp;descendOrder=false&amp;priceLow=&amp;priceHigh=&amp;quantityBegin=0&amp;province=&amp;showProvince=&amp;city=&amp;isMultiColor=false&amp;isMultiSize=false"><span class="cat">[童装] </span>2013童装秋冬必爆款热批中</a></li>
+                    <li><a href="http://view7qcd.com/cms/xsppf/babywanju.html?spm=a260k.6595742.228034462.4"><span class="cat">[玩具] </span>助早教 益智力 儿童玩具专场</a></li>
+                    <li><a href="http://bmall7qcd.com/muying/index.htm"><span class="cat">[母婴] </span>高性价比母婴品牌货收录3738件</a></li>
+                </ul>
+            </div>                    </div>
+        <div class="category mod-spm" data-spm="794253853">
+
+
+            <!-- {foreach from=$cate_tz item=category name=fe_gcate} -->
+            <!-- {foreach from=$category.children item=child} -->
+            <div class="cat-cell">
+                <h3 class="cat-title"> <a href="{url app=search&cate_id=$child.id}">{$child.value|escape}</a></h3>
+                <ul>
+                    <!-- {foreach from=$child.children item=subchild} -->
+                    <li><a href="{url app=search&cate_id=$subchild.id}">{$subchild.value|escape}</a></li>
+                    <!-- {/foreach} -->
+                </ul>
+            </div>
+            <!-- {/foreach} -->
+
+            <!-- {/foreach} -->
+
+
+        </div>
+        <div class="banner mod-spm" data-spm="794253857">
+            <a href="http://plas7qcd.com/huodong/1118xsjuhui.html" class="a-img">
+                <img alt="" src="/themes/mall/default/styles/default/web/img/tz.jpg" style="zoom: 1;"></a>
+
+        </div>
+    </div>
+</div>
+
+
+<div class="mod-ind" data-index="1" id="" data-short-title="橡塑" data-long-title="橡胶塑料" data-indust-id="33" data-spm="794253845">
+    <div class="header"><span class="index"><a href="＃" data-spm-anchor-id="a260k.635.794253845.1">3F</a></span>
+        <h1 class="title ms-yh"><a href="http://plas7qcd.com">纺织</a></h1>
+    </div>
+    <div class="content">
+        <div class="hot mod-spm" data-spm="794253897">
+            <div class="brand">
+                <ul class="list">
+                    <li><a href="http://goldkings.cn7qcd.com/"><img alt="" src="http://i01.c.aliimg.com/cms/upload/2013/682/266/1662286_391766165.png" style="zoom: 1;"></a></li>
+                    <li><a href="http://justlinen.cn7qcd.com/"><img alt="" src="http://i03.c.aliimg.com/cms/upload/2013/882/266/1662288_391766165.png" style="zoom: 1;"></a></li>
+                    <li><a href="http://sanlizp.cn7qcd.com/"><img alt="" src="http://i01.c.aliimg.com/cms/upload/2013/782/266/1662287_391766165.png" style="zoom: 1;"></a></li>
+                    <li><a href="http://huafengit27qcd.com/"><img alt="" src="http://i01.c.aliimg.com/cms/upload/2013/646/538/1835646_391766165.jpg" style="zoom: 1;"></a></li>
+                </ul>
+            </div>
+            <div class="text">
+                <ul>
+                    <li><a href="http://dcms7qcd.com/open/page/fangzhi.html?descOrder=true&amp;tags=7682&amp;sortType=sale_quantity"><span class="cat">[现货] </span>面辅料全场低起订 快发货！</a></li>
+                    <li><a href="http://dcms7qcd.com/open/page/fangzhi.html?tags=20994&amp;categorys=1046528"><span class="cat">[新品] </span>精品羽绒服面料 为寒冬供货！</a></li>
+                    <li><a href="http://view7qcd.com/cms/promotion/fzpk/dyz1210.html"><span class="cat">[名企] </span>纺织好货源 知名品牌品质保证!</a></li>
+                </ul>
+            </div>                    </div>
+        <div class="category mod-spm" data-spm="794253853">
+
+
+
+            <!-- {foreach from=$cate_ffz item=category name=fe_gcate} -->
+            <!-- {foreach from=$category.children item=child} -->
+            <div class="cat-cell">
+                <h3 class="cat-title"> <a href="{url app=search&cate_id=$child.id}">{$child.value|escape}</a></h3>
+                <ul>
+                    <!-- {foreach from=$child.children item=subchild} -->
+                    <li><a href="{url app=search&cate_id=$subchild.id}">{$subchild.value|escape}</a></li>
+                    <!-- {/foreach} -->
+                </ul>
+            </div>
+            <!-- {/foreach} -->
+
+            <!-- {/foreach} -->
+
+        </div>
+        <div class="banner mod-spm" data-spm="794253857">
+            <a href="http://plas7qcd.com/huodong/1118xsjuhui.html" class="a-img">
+                <img alt="" src="/themes/mall/default/styles/default/web/img/ffz.jpg" style="zoom: 1;"></a>
+
+        </div>
+    </div>
+</div>
+
+
+<div class="mod-ind" data-index="1" id="" data-short-title="橡塑" data-long-title="橡胶塑料" data-indust-id="33" data-spm="794253845">
+    <div class="header"><span class="index"><a href="＃" data-spm-anchor-id="a260k.635.794253845.1">4F</a></span>
+        <h1 class="title ms-yh"><a href="http://plas7qcd.com">辅料</a></h1>
+    </div>
+    <div class="content">
+        <div class="hot mod-spm" data-spm="794253849">
+            <div class="inst-belt">
+                <a href="http://dongguan7qcd.com/youshihangye/suliaoyuanliao.htm" class="a-img belt-img">
+                    <img alt="" src="/themes/mall/default/styles/default/web/img/flfs.jpg" style="zoom: 1;"></a>
+                <ul class="fd-clr">
+                    <li><a href="http://page7qcd.com/shtml/plastic/supplier.html">金牌商家</a></li>
+                    <li><a href="http://s7qcd.com/selloffer/offer_search.htm?city=%C9%EE%DB%DA%CA%D0&amp;keywords=%D1%C7%BF%CB%C1%A6&amp;categoryId=0&amp;from=marketSearch&amp;n=y&amp;filt=y">深圳亚克力</a></li>
+                    <li><a href="http://s7qcd.com/spu/--.html?spuList=gene">选料中心</a></li>
+                    <li><a href="http://s7qcd.com/selloffer/offer_search.htm?city=%C9%DC%D0%CB&amp;province=%D5%E3%BD%AD&amp;categoryId=10390&amp;earseFeat=true&amp;from=industrySearch&amp;industryFlag=plas&amp;sortType=normal&amp;n=y&amp;filt=y">诸暨管材</a></li>
+                </ul>
+            </div>
+            <div class="text">
+                <ul>
+                    <li><a href="http://s7qcd.com/spu/3004317.html?keywords=100P"><span class="cat">[报价] </span>每日抢鲜 高销量美国杜邦100P</a></li>
+                    <li><a href="http://plas7qcd.com/huodong/dacu/13/1118/xiangsu.html"><span class="cat">[抄底] </span>看1118货源 最后一波年末疯惠</a></li>
+                    <li><a href="http://s7qcd.com/selloffer/offer_search.htm?spm=a260k.635.794253853.16&amp;categoryId=1037248&amp;earseFeat=true&amp;descendOrder=true&amp;from=industrySearch&amp;industryFlag=plas&amp;sortType=booked&amp;n=y&amp;filt=y"><span class="cat">[制品] </span>亚克力产品定制，找经验最足厂家</a></li>
+
+
+                </ul>
+            </div>                  </div>
+        <div class="category mod-spm" data-spm="794253853">
+
+            <!-- {foreach from=$cate_fl item=category name=fe_gcate} -->
+            <!-- {foreach from=$category.children item=child} -->
+            <div class="cat-cell">
+                <h3 class="cat-title"> <a href="{url app=search&cate_id=$child.id}">{$child.value|escape}</a></h3>
+                <ul>
+                    <!-- {foreach from=$child.children item=subchild} -->
+                    <li><a href="{url app=search&cate_id=$subchild.id}">{$subchild.value|escape}</a></li>
+                    <!-- {/foreach} -->
+                </ul>
+            </div>
+            <!-- {/foreach} -->
+
+            <!-- {/foreach} -->
+
+
+        </div>
+        <div class="banner mod-spm" data-spm="794253857">
+            <a href="http://plas7qcd.com/huodong/1118xsjuhui.html" class="a-img">
+                <img alt="" src="/themes/mall/default/styles/default/web/img/fl.jpg" style="zoom: 1;">
+
+            </a>
+
+        </div>
+    </div>
+</div>
+
+
+<div class="mod-ind" data-index="1" id="" data-short-title="橡塑" data-long-title="橡胶塑料" data-indust-id="33" data-spm="794253845">
+    <div class="header"><span class="index"><a href="＃" data-spm-anchor-id="a260k.635.794253845.1">5F</a></span>
+        <h1 class="title ms-yh"><a href="http://plas7qcd.com">机械设备</a></h1>
+    </div>
+    <div class="content">
+        <div class="hot mod-spm" data-spm="794253929">
+            <div class="brand">
+                <ul class="list img-3">
+                    <li class="big"><a href="http://imall7qcd.com/brand/222.htm?spm=a260k.635.794253929.1" data-spm-anchor-id="a260k.635.794253929.1"><img alt="" src="http://i04.c.aliimg.com/cms/upload/2013/023/995/1599320_2004042171.jpg" style="zoom: 1;"></a></li>
+                    <li><a href="http://imall7qcd.com/brand/911.htm"><img alt="兄弟" src="http://i00.c.aliimg.com/cms/upload/2013/551/995/1599155_2004042171.jpg
+" style="zoom: 1;"></a></li>
+                    <li><a href="http://imall7qcd.com/brand/223.htm"><img alt="" src="http://i04.c.aliimg.com/cms/upload/2013/351/995/1599153_2004042171.jpg
+" style="zoom: 1;"></a></li>
+                </ul>
+            </div>
+            <div class="text">
+                <ul>
+                    <li><a href="http://industry7qcd.com/huodong/zhtz/1010/index.html"><span class="cat">[工具] </span>工具套装热销品牌</a></li>
+                    <li><a href="http://industry7qcd.com/imall/znq2013/index.html"><span class="cat">[品牌] </span>商城周年庆，大品牌一元抢购！</a></li>
+                    <li><a href="http://view7qcd.com/cms/mro/pinpaijichuang/2013/07/index.html"><span class="cat">[机床] </span>史上最牛速霸线切割机床！</a></li>
+                </ul>
+            </div>                    </div>
+        <div class="category mod-spm" data-spm="794253853">
+
+            <!-- {foreach from=$cate_jxsb item=category name=fe_gcate} -->
+            <!-- {foreach from=$category.children item=child} -->
+            <div class="cat-cell">
+                <h3 class="cat-title"> <a href="{url app=search&cate_id=$child.id}">{$child.value|escape}</a></h3>
+                <ul>
+                    <!-- {foreach from=$child.children item=subchild} -->
+                    <li><a href="{url app=search&cate_id=$subchild.id}">{$subchild.value|escape}</a></li>
+                    <!-- {/foreach} -->
+                </ul>
+            </div>
+            <!-- {/foreach} -->
+
+            <!-- {/foreach} -->
+
+
+        </div>
+        <div class="banner mod-spm" data-spm="794253857">
+            <a href="http://plas7qcd.com/huodong/1118xsjuhui.html" class="a-img">
+                <img alt="" src="/themes/mall/default/styles/default/web/img/jxsb.jpg" style="zoom: 1;"></a>
+
+        </div>
+    </div>
+</div>
+
+
+<div id="mod-club" data-index="19" class="mod-ind mod-club layout" data-short-title="社区" data-long-title="以商会友" data-spm="794254133">
+    <div class="header"><span class="index"><a href="http://club7qcd.com/?spm=a260k.635.794254133.1" data-spm-anchor-id="a260k.635.794254133.1">6F</a></span>
+        <h1 class="title ms-yh"><a href="http://club7qcd.com/" onmousedown="return aliclick(this,'?tracelog=cnindex_club_txt_0');">以商会友</a></h1>
+
+        <ul class="fd-right add">
+            <li class="first-col">
+                <a href="/doc/online/index.html" onmousedown="return aliclick(this,'?tracelog=cnindex_wenku_txt_08');">文库</a>
+            </li>
+            <li>
+                <a href="/" onmousedown="return aliclick(this,'?tracelog=cnindex_baike_txt_syj');">生意经</a>
+            </li>
+            <li>
+                <a href="/dict/index.html" onmousedown="return aliclick(this,'?tracelog=cnindex_baike_txt_srcd');">商人词典</a>
+            </li>
+            <li>
+                <a href="http://blog7qcd.com/" onmousedown="return aliclick(this,'?tracelog=cnindex_baike_txt_yun');">博客</a>
+            </li>
+            <li>
+                <a href="http://quan7qcd.com/" onmousedown="return aliclick(this,'?tracelog=cnindex_blog_txt_blog');">商友圈</a>
+            </li>
+            <li>
+                <a href="http://video7qcd.com/" onmousedown="return aliclick(this,'?tracelog=cnindex_video_txt_01');">商人视频</a>
+            </li>
+        </ul>
+    </div>
+    <div class="content fd-clr">
+        <div class="club-left">
+            <ul class="club-submenu fd-clr">
+                <li><a href="http://club7qcd.com/threadlist/110.html?spm=a260k.635.794254133.10" onmousedown="return aliclick(this,'?tracelog=cnindex_club_txt_17');" data-spm-anchor-id="a260k.635.794254133.10">创业论坛</a></li>
+                <li><a href="http://club7qcd.com/threadview/30368239.html" onmousedown="return aliclick(this,'?tracelog=cnindex_club_txt_18');">订单来敲门</a></li>
+                <li><a href="http://club7qcd.com/threadview/35582658.html" onmousedown="return aliclick(this,'?tracelog=cnindex_club_txt_19');">话题PK</a></li>
+                <li><a href="http://club7qcd.com/threadview/30847479.html" onmousedown="return aliclick(this,'?tracelog=cnindex_club_txt_20');">创业明星</a></li>
+                <li><a href="http://view7qcd.com/cms/baike/zhuanxing.html" onmousedown="return aliclick(this,'?tracelog=cnindex_baike_txt_05');">转型之痛</a></li>
+                <li><a href="http://view7qcd.com/cms/baike/doc/online/fengmian.html" onmousedown="return aliclick(this,'?tracelog=cnindex_baike_txt_06');">创业路上</a></li>
+                <li><a href="http://view7qcd.com/cms/baike/doc/online/cy2012.html" onmousedown="return aliclick(this,'?tracelog=cnindex_wenku_txt_05');">致富项目</a></li>
+                <li><a href="/doc/browse-2-d-.html" onmousedown="return aliclick(this,'?tracelog=cnindex_wenku_txt_06');">万元创业</a></li>
+                <li><a href="/doc/online/browse-6-d-.html" onmousedown="return aliclick(this,'?tracelog=cnindex_wenku_txt_07');">地摊商机</a></li>
+            </ul>      <div class="club-article fd-clr">
+            <div class="article-left cell-article first">
+                <div class="cell">
+                    <div class="img-hold"><a title="老板娘亲上阵，秒杀淘女郎" href="http://quan7qcd.com/thread/53118.htm?tracelog=shouye_shequ_pic" class="a-mix"><img alt="老板娘亲上阵，秒杀淘女郎" width="212" height="108" src="http://i01.c.aliimg.com/cms/upload/2013/063/338/1833360_429016583.jpg" style="zoom: 1;"> <div class="description"></div>
+                        <span class="text">老板娘亲上阵，秒杀淘女郎</span>
+                    </a></div>
+                    <ul class="club-link">
+                        <li><a href="http://quan7qcd.com/thread/9813/10348570.htm" onmousedown="return aliclick(this,'?tracelog=cnindex_club_txt_01');" class="orange">全村最穷第一家，我6岁前没看到过米</a></li>
+                        <li><a href="http://quan7qcd.com/thread/103930/10347818.htm?tracelog=shouye_shequ_wenzi">多少卖家稀里糊涂的死在不懂规则上？
+                        </a></li>
+                    </ul>
+                </div>
+                <div class="spacing"></div>
+                <div class="cell">
+                    <div class="img-hold"><a title="电商大师曝怪论：你想到的全错了" href="http://quan7qcd.com/thread/43102.htm?tracelog=shouye_shequ_pic" class="a-mix"><img alt="电商大师曝怪论：你想到的全错了" width="212" height="108" src="http://i05.c.aliimg.com/cms/upload/2013/763/338/1833367_429016583.jpg" style="zoom: 1;">
+                        <div class="description"></div>
+                        <span class="text">电商大师曝怪论：你想到的全错了</span>
+                    </a></div>
+
+                    <ul class="club-link">
+                        <li><a href="http://view7qcd.com/cms/quan/shop1372743703836.html?tracelog=shouye_shequ_wenzi" class="orange">50件可怜的起批量都养不活4个工人</a></li>
+                        <li><a href="http://view7qcd.com/cms/quan/gongkaike011.html?tracelog=shouye_shequ_wenzi">一年能做到三千万，苦练内功你也可以</a></li>
+                    </ul>
+                </div>
+            </div>        <div class="article-middle cell-article">
+            <div class="cell">
+                <div class="img-hold"><a href="http://view7qcd.com/cms/quan/1118quanzi.html?tracelog=shouye_shequ_pic" title="阿里80后专业美女网商推荐" onmousedown="return aliclick(this,'?tracelog=cnindex_friendquan_pic_04');" class="a-mix"><img alt="阿里80后专业美女网商推荐" width="212" height="108" border="0" src="http://i01.c.aliimg.com/cms/upload/2013/083/338/1833380_429016583.jpg" style="zoom: 1;">
+                    <div class="description"></div>
+                    <span class="text">阿里80后专业美女网商推荐</span>   </a></div>
+                <ul class="club-link">
+                    <li><a href="http://quan7qcd.com/thread/83278/9135886.htm?tracelog=shouye_shequ_wenzi" class="orange">
+                        土豪秀爆款，赢取免费专场推广资源
+                    </a></li>
+                    <li><a href="http://quan7qcd.com/thread/1167.htm?tracelog=shouye_shequ_wenzi">买充气娃娃必须知道的三个常识 </a></li>
+                </ul>
+            </div>
+            <div class="spacing"></div>
+            <div class="cell">
+                <div class="img-hold"><a href="/doc/online/show-115278.html" title="3月9000单，教你0成本全网营销" onmousedown="return aliclick(this,'?tracelog=cnindex_wenku_pic_02');" class="a-mix"><img alt="3月9000单，教你0成本全网营销" width="212" height="108" src="http://i01.c.aliimg.com/cms/upload/2013/101/665/1566101_63277698.jpg" style="zoom: 1;">
+                    <div class="description"></div>
+                    <span class="text">3月9000单，教你0成本全网营销</span></a></div>
+                <ul class="club-link">
+                    <li><a href="/doc/online/show-115286.html" onmousedown="return aliclick(this,'?tracelog=cnindex_wenku_txt_03');" class="orange">创业中的五种虚假执行力</a></li>
+                    <li><a href="/doc/online/show-115288.html" onmousedown="return aliclick(this,'?tracelog=cnindex_wenku_txt_04');">创业第一年最易犯的12个错误</a></li>
+
+                </ul>
+            </div>
+        </div>        <div class="article-right cell-article last">
+            <div class="cell">
+                <div class="img-hold"><a href="/" title="压价压倒爆 供应商之死谁的错？" onmousedown="return aliclick(this,'?tracelog=cnindex_baike_txt_01');" class="a-mix"><img alt="客户邀请去泰国谈生意是否有诈？？" width="212" height="108" border="0" src="http://i01.c.aliimg.com/cms/upload/2013/204/338/1833402_64089432.jpg" style="zoom: 1;">
+                    <div class="description"></div>
+                    <span class="text">销售额不达标 要惩罚业务员吗？</span></a></div>
+                <ul class="club-link">
+                    <li><a href="/doc/view-d36462082.html" onmousedown="return aliclick(this,'?tracelog=cnindex_baike_txt_02');" class="orange">反浪费条例对那些行业影响最大</a></li>
+                    <li><a href="/doc/view-d36377526.html" onmousedown="return aliclick(this,'?tracelog=cnindex_baike_txt_03');">风投公司会选裂帛还是韩都衣舍
+                    </a></li>
+                </ul>
+            </div>
+            <div class="spacing"></div>
+            <div class="cell">
+
+
+
+                <div class="img-hold"><a href="/doc/online/show-115015.html" title="10元店创业：每月卖货2000万" onmousedown="return aliclick(this,'?tracelog=cnindex_wenku_pic_01');" class="a-mix"><img alt=" 10元店创业：每月卖货2000万" width="212" height="108" src="http://i05.c.aliimg.com/cms/upload/2013/203/900/1009302_63277698.jpg" style="zoom: 1;">
+                    <div class="description"></div>
+                    <span class="text">10元店创业：每月卖货2000万</span></a></div>
+                <ul class="club-link">
+                    <li><a href="/doc/online/show-13298.html" onmousedown="return aliclick(this,'?tracelog=cnindex_wenku_txt_03');" class="orange">干货：服装批发市场新手进货指南</a></li>
+                    <li><a href="/doc/online/show-9505.html" onmousedown="return aliclick(this,'?tracelog=cnindex_wenku_txt_04');">批发市场及进货技巧经典问答</a></li>
+                </ul>
+            </div>
+        </div>      </div>
+        </div>
+        <div class="club-right">
+            <div id="club-star" class="club-star">
+                <div class="fd-clr header-container">
+                    <div class="header">
+                        <div class="cell-header"> <a href="http://quan7qcd.com/?tracelog=shouye_haohuo_pic" class="more">更多&nbsp;<span class="icon-hp-more"></span></a>
+                            <div class="title">创业进货</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="dashed solid-line"></div>
+                <div id="test" class="cell-hot-market">
+                    <ul class="hot-img">
+                        <li class="f-tab-b" style="display: list-item;"><a href="http://quan7qcd.com/thread/79938.htm?tracelog=shouye_haohuo_pic"><img alt="" width="60" height="60" border="0" src="http://i03.c.aliimg.com/cms/upload/2013/067/728/1827760_429016583.jpg"></a></li>
+                        <li class="f-tab-b fd-hide" style="display: none;"><a href="http://quan7qcd.com/thread/53714.htm?tracelog=shouye_haohuo_pic"><img alt="" width="60" height="60" border="0" src="http://i05.c.aliimg.com/cms/upload/2013/377/728/1827773_429016583.jpg"></a></li>
+                        <li class="f-tab-b fd-hide" style="display: none;"><a href="http://quan7qcd.com/thread/46034.htm?tracelog=shouye_haohuo_pic"><img data-lazy-src="http://i05.c.aliimg.com/cms/upload/2013/477/728/1827774_429016583.jpg" alt="" width="60" height="60" border="0"></a></li>
+                    </ul>
+                    <ul class="hot-info">
+                        <li class="f-tab-t current"><a href="http://quan7qcd.com/thread/79938.htm?tracelog=shouye_haohuo_pic">超美鞋秒杀高富帅</a></li>
+                        <li class="f-tab-t"><a href="http://quan7qcd.com/thread/53714.htm?tracelog=shouye_haohuo_pic">手提包爆款热卖</a></li>
+                        <li class="f-tab-t"><a href="http://quan7qcd.com/thread/46034.htm?tracelog=shouye_haohuo_pic">有它不怕男人不回家</a></li>
+                    </ul>
+                </div>
+            </div>      <div class="club-hot">
+            <div class="fd-clr header-container">
+                <div class="header">
+                    <div class="cell-header"><a href="http://club7qcd.com/" onmousedown="return aliclick(this,'?tracelog=cnindex_club_txt_rt');" class="more">更多热帖&nbsp;<span class="icon-hp-more"></span></a>
+                        <div class="title">热度排行</div>
+                    </div>
+                </div>
+            </div>
+            <div class="solid-line"></div>
+            <div class="mod-industry mod-today-hot">
+                <div class="content">
+                    <ol class="cell-rank-list">
+                        <li class="rank1"> <a href="/doc/view-d36484318.html" onmousedown="return aliclick(this,'?tracelog=cnindex_baike_txt_09');"><span class="count">25674</span>客户千里外邀喝喜酒去不去？</a></li>
+                        <li class="rank2"> <a href="/doc/view-d36330500.html" onmousedown="return aliclick(this,'?tracelog=cnindex_baike_txt_08');"><span class="count">23222</span>《爸爸去哪儿》策划案征集</a></li>
+                        <li class="rank3"> <a href="/doc/view-d36511656.html" onmousedown="return aliclick(this,'?tracelog=cnindex_baike_txt_10');"><span class="count">20199</span>90客户咬定泄露样品怎么办？</a></li>
+                        <li class="rank4"> <a href="http://club7qcd.com/threadview/36528912.html" onmousedown="return aliclick(this,'?tracelog=cnindex_club_txt_05');"><span class="count">19328</span>几毛钱的圆珠笔照样接单千万</a></li>
+                        <li class="rank5"> <a href="http://quan7qcd.com/quan/53118.htm?tracelog=shouye_redu_wenzi"><span class="count">19161</span>无法抵抗的魅力 挂脖露肩毛衣</a></li>
+                        <li class="rank6"> <a href="http://quan7qcd.com/quan/79938.htm?tracelog=shouye_redu_wenzi"><span class="count">19046</span>摇摆的是鞋子，诠释的是人生</a></li>
+                        <li class="rank7"> <a href="http://quan7qcd.com/quan/53714.htm?tracelog=shouye_redu_wenzi"><span class="count">19009</span>利润翻10倍，韩版包包最抢手</a></li>
+                        <li class="rank8"> <a href="http://quan7qcd.com/quan/46034.htm?tracelog=shouye_redu_wenzi"><span class="count">18945</span>
+
+                            校园萌物 百货也有学院风</a></li>
+                        <li class="rank9"> <a href="http://view7qcd.com/cms/quan/gongkaike001.html?tracelog=shouye_redu_wenzi"><span class="count">18678</span>
+                            十三行服装市场拿货规则</a></li>
+                    </ol>          </div>
+            </div>
+        </div>
+        </div>
+    </div>    		</div>
+
+</div>
+
+
+
+
+
+
+
+
+</div>
+
+</div>
+
+
+
+</div>
+
+<!----category--->
+
+
+
+<div class=" clear"></div>
+<!-- footer  -->
+
+<div class="footer">
+    <div class="footer-box">
+        <div class="footer-nav">
+            <dl>
+                <dt>
+                    新手指南
+                </dt>
+                <dd>
+                    <a href="">免费注册</a>
+                </dd>
+                <dd>
+                    <a href="">买家入门</a>
+                </dd>
+                <dd>
+                    <a href="">卖家入门</a>
+                </dd>
+                <dd>
+                    <a href="">在线帮助</a>
+                </dd>
+            </dl>
+            <dl>
+                <dt>
+                    交易安全
+                </dt>
+                <dd>
+                    <a href="">买家防骗</a>
+                </dd>
+                <dd>
+                    <a href="">交易纠纷</a>
+                </dd>
+                <dd>
+                    <a href="">投诉举报</a>
+                </dd>
+            </dl>
+            <dl>
+                <dt>
+                    采购商服务
+                </dt>
+                <dd>
+                    <a href="">找公司</a>
+                </dd>
+                <dd>
+                    <a href="">找产品</a>
+                </dd>
+                <dd>
+                    <a href="">进货单</a>
+                </dd>
+                <dd>
+                    <a href="">产业带地图</a>
+                </dd>
+            </dl>
+            <dl>
+                <dt>
+                    产业带入驻
+                </dt>
+                <dd>
+                    <a href="">供应商入驻</a>
+                </dd>
+                <dd>
+                    <a href="">政府入驻</a>
+                </dd>
+                <dd>
+                    <a href="">第三方服务入驻</a>
+                </dd>
+                <dd>
+                    <a href="">入驻常见问题</a>
+                </dd>
+            </dl>
+            <dl>
+                <dt>
+                    产业带特色
+                </dt>
+                <dd>
+                    <a href="">源头好货产地直供</a>
+                </dd>
+                <dd>
+                    <a href="">直达产地明星大厂</a>
+                </dd>
+                <dd>
+                    <a href="">汇聚全国专业市场</a>
+                </dd>
+                <dd>
+                    <a href="">合作方：南通尽在</a>
+                </dd>
+            </dl>
+        </div>
+        <div class="contactus">
+            <div class="mark"><img alt="" title="" src="/themes/mall/default/styles/default/web/img/mark.png">
+            </div>
+            <div class="mark-num">
+                欢迎加入七彩岛
+                <br/>
+                <span>微信号：</span>qcdtz
+            </div>
+        </div>
+    </div>
+</div>
+<!--footer-->
+
+
+
+</body>
+</html>
