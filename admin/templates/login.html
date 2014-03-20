@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>7彩岛后台管理系统</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Loading Bootstrap -->
+    <link href="../../flat/bootstrap/css/bootstrap.css" rel="stylesheet">
+
+    <!-- Loading Flat UI -->
+    <link href="../../flat/css/flat-ui.css" rel="stylesheet">
+    <link href="../../flat/css/demo.css" rel="stylesheet">
+
+
+
+    <!-- HTML5 shim, for IE6-8 support of HTML5 elements. All other JS at the end of file. -->
+    <!--[if lt IE 9]>
+    <script src="../../flat/js/html5shiv.js"></script>
+    <![endif]-->
+
+    <script type="text/javascript">
+        if (self != top)
+        {
+            /* 在框架内，则跳出框架 */
+            top.location = self.location;
+        }
+        $(function(){
+            $('#user_name').focus();
+        });
+    </script>
+
+
+</head>
+<body>
+<div class="container">
+
+<br/>
+<div class="login">
+    <div class="login-screen">
+        <div class="login-icon">
+            <img src="../../flat/images/login/icon.png" alt="7彩岛后台管理" />
+            <h4> 7彩岛登陆</h4>
+        </div>
+
+        <div class="login-form">
+            <form method="post">
+            <div class="form-group">
+                <input name="user_name" type="text" class="form-control login-field" value="" placeholder="请输入帐号" id="user_name" />
+                <label class="login-field-icon fui-user" for="user_name"></label>
+            </div>
+
+            <div class="form-group">
+                <input name="password" type="password" class="form-control login-field" value="" placeholder="请输入密码" id="password" />
+                <label class="login-field-icon fui-lock" for="password"></label>
+            </div>
+
+            <input class="btn btn-primary btn-lg btn-block" type="submit" name="" value="登陆" />
+
+            <!--<a class="login-link" href="{$site_url}/index.php?app=find_password" >忘记密码?</a>-->
+            </form>
+        </div>
+
+    </div>
+</div>
+
+</div> <!-- /container -->
+
+<!-- Load JS here for greater good =============================-->
+<script src="../../flat/js/jquery-1.8.3.min.js"></script>
+<script src="../../flat/js/jquery-ui-1.10.3.custom.min.js"></script>
+<script src="../../flat/js/jquery.ui.touch-punch.min.js"></script>
+<script src="../../flat/js/bootstrap.min.js"></script>
+<script src="../../flat/js/bootstrap-select.js"></script>
+<script src="../../flat/js/bootstrap-switch.js"></script>
+<script src="../../flat/js/flatui-checkbox.js"></script>
+<script src="../../flat/js/flatui-radio.js"></script>
+<script src="../../flat/js/jquery.tagsinput.js"></script>
+<script src="../../flat/js/jquery.placeholder.js"></script>
+<script src="../../flat/js/jquery.stacktable.js"></script>
+<script src="../../flat/js/video.js"></script>
+<script src="../../flat/js/application.js"></script>
+
+
+
+</body>
+</html>

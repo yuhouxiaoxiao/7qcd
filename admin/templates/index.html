@@ -1,0 +1,126 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="shortcut icon" href="../../docs-assets/ico/favicon.png">
+
+    <title>七彩岛童装平台-管理中心</title>
+    <script src="../../dist/jquery-1.10.2.min.js"></script>
+
+    <!-- Bootstrap core CSS -->
+    <link href="../../dist/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="../../dist/offcanvas.css" rel="stylesheet">
+
+    <!-- Just for debugging purposes. Don't actually copy this line! -->
+    <!--[if lt IE 9]><script src="../../docs-assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+    <![endif]-->
+
+    <script type="text/javascript" src="{lib file=ecmall.js}" charset="utf-8"></script>
+
+    <script type="text/javascript">
+        var menu = {$menu_json};
+    </script>
+
+    <script type="text/javascript" src="{res file=js/index.js}" charset="utf-8"></script>
+    <style>
+        .navbar-inverse{
+            background-color: #428bca;
+            border-color: #428bca;
+        }
+        .navbar-inverse .navbar-nav>.active>a, .navbar-inverse .navbar-nav>.active>a:hover, .navbar-inverse .navbar-nav>.active>a:focus {
+            color: #fff;
+            background-color: #3F6EB3;
+        }
+        .navbar-inverse .navbar-brand {
+            color: #fff;
+        }
+        .navbar-inverse .navbar-nav>li>a {
+            color: #fff;
+        }
+    </style>
+
+</head>
+
+<body>
+<div class="navbar navbar-fixed-top navbar-inverse" role="navigation">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="#">七彩岛</a>
+        </div>
+        <div class="collapse navbar-collapse">
+            <div class="navbar-right" style="padding-top: 10px;">
+
+                <!--<a  style="color:#fff;" href="{$site_url}/index.php" target="_blank">[平台首页]</a></span>-->
+                <a  style="color:#fff;margin-right: 5px;" href="javascript:;" class="menu_btn1" id="iframe_refresh">[{$lang.refresh}]</a>
+                <a style="color:#fff;margin-right: 5px;"  href="javascript:;" class="menu_btn2" id="clear_cache">[{$lang.clear_cache}]</a>
+                <a style="color:#fff;"  href="index.php?act=logout">[{$lang.logout}]</a>
+                <!--<button style="margin-top: 5px;" type="submit" class="btn btn-info">退出登陆</button>-->
+            </div>
+            <ul class="nav navbar-nav" id="nav">
+                <!--<li class="active"><a href="#">Home</a></li>-->
+                <!--<li><a href="#about">About</a></li>-->
+                <!--<li><a href="#contact">Contact</a></li>-->
+            </ul>
+
+        </div><!-- /.nav-collapse -->
+
+    </div><!-- /.container -->
+</div><!-- /.navbar -->
+
+<div class="container" id="content">
+
+    <div class="row row-offcanvas row-offcanvas-right">
+        <div class="col-xs-6 col-sm-2 sidebar-offcanvas" id="sidebar" role="navigation" id="left">
+            <div class="list-group" id="leftMenus">
+                <dl id="submenu">
+                    <!--<dt ><a class="list-group-ite ico1" id="submenuTitle" href="javascript:;"></a></dt>-->
+                </dl>
+                <!--<a href="#" class="list-group-item active">Link</a>-->
+                <!--<a href="#" class="list-group-item">Link</a>-->
+
+            </div>
+        </div><!--/span-->
+
+        <div class="col-xs-12 col-sm-10" id="right">
+            <iframe frameborder="0" style="display:none;" width="100%" id="workspace"></iframe>
+        </div><!--/span-->
+
+
+    </div><!--/row-->
+
+    <hr>
+
+    <footer>
+        <p>&copy; 七彩岛童装平台 2013</p>
+    </footer>
+
+</div><!--/.container-->
+
+
+
+<!-- Bootstrap core JavaScript
+================================================== -->
+<!-- Placed at the end of the document so the pages load faster -->
+
+<script src="../../dist/bootstrap.min.js"></script>
+<script src="../../dist/offcanvas.js"></script>
+</body>
+</html>
